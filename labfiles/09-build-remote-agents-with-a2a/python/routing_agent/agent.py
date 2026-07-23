@@ -43,15 +43,16 @@ class RemoteAgentConnections:
     async def send_message(self, message_request: SendMessageRequest) -> SendMessageResponse:
         return await self.agent_client.send_message(message_request)
 
+
 class RoutingAgent:
 
-    def __init__(self,task_callback: TaskUpdateCallback | None = None):
+    def __init__(self, task_callback: TaskUpdateCallback | None = None):
 
         self.task_callback = task_callback
         self.remote_agent_connections: dict[str, RemoteAgentConnections] = {}
         self.cards: dict[str, AgentCard] = {}
         self.agents: str = ''
-        
+
         # Initialize Azure AI Agents client
         self.agents_client = AgentsClient(
             endpoint=os.environ["PROJECT_ENDPOINT"],
@@ -64,14 +65,16 @@ class RoutingAgent:
         self.azure_agent = None
         self.current_thread = None
 
-
     @classmethod
-    async def create(cls, remote_agent_addresses: list[str], task_callback: TaskUpdateCallback | None = None) -> 'RoutingAgent':
+    async def create(
+        cls,
+        remote_agent_addresses: list[str],
+        task_callback: TaskUpdateCallback | None = None
+    ) -> 'RoutingAgent':
         """Create and asynchronously initialize an instance of the RoutingAgent."""
         instance = cls(task_callback)
         await instance._async_init_components(remote_agent_addresses)
         return instance
-    
 
     def list_remote_agents(self) -> str:
         if not self.remote_agent_connections:
@@ -82,7 +85,6 @@ class RoutingAgent:
             lines.append(f"{card.name}: {card.description}")
 
         return "[\n  " + ",\n  ".join(lines) + "\n]"
-    
 
     async def _async_init_components(self, remote_agent_addresses: list[str]) -> None:
         """Asynchronous part of initialization."""
@@ -99,49 +101,63 @@ class RoutingAgent:
                     self.cards[card.name] = card
 
                 except httpx.ConnectError as e:
-                    print( f'ERROR: Failed to get agent card from {address}: {e}')
+                    print(f"ERROR: Failed to get agent card from {address}: {e}")
                 except Exception as e:  # Catch other potential errors
-                    print(f'ERROR: Failed to initialize connection for {address}: {e}')
+                    print(f"ERROR: Failed to initialize connection for {address}: {e}")
             print(f"Found remote agents: {self.list_remote_agents()}")
 
-    
     async def send_message(self, agent_name: str, task: str):
         # Sends a task to remote agent.
 
         if agent_name not in self.remote_agent_connections:
-            raise ValueError(f'Agent {agent_name} not found')
-        
-        # Retrieve the remote agent's A2A client using the agent name 
-        
+            raise ValueError(f"Agent {agent_name} not found")
+
+        # Retrieve the remote agent's A2A client using the agent name
+        client = self.remote_agent_connections[agent_name]
 
         if not client:
-            raise ValueError(f'Client not available for {agent_name}')
-        
+            raise ValueError(f"Client not available for {agent_name}")
+
         message_id = str(uuid.uuid4())
 
         # Construct the payload to send to the remote agent
-        
-        
+        payload: dict[str, Any] = {
+            "message": {
+                "role": "user",
+                "parts": [
+                    {
+                        "kind": "text",
+                        "text": task,
+                    }
+                ],
+                "messageId": message_id,
+            }
+        }
+
         # Wrap the payload in a SendMessageRequest object
-        
+        message_request = SendMessageRequest(
+            id=message_id,
+            params=MessageSendParams.model_validate(payload),
+        )
 
         # Send the message to the remote agent client and await the response
-        
-        
+        send_response: SendMessageResponse = await client.send_message(
+            message_request=message_request
+        )
+
         if not isinstance(send_response.root, SendMessageSuccessResponse):
-            print('received non-success response. Aborting get task ')
+            print("received non-success response. Aborting get task")
             return
 
         if not isinstance(send_response.root.result, Task):
-            print('received non-task response. Aborting get task ')
+            print("received non-task response. Aborting get task")
             return
 
         return send_response.root.result
 
-
     def create_agent(self):
         # Create an Azure AI Agent instance
-        
+
         try:
             # Create Azure AI Agent with the send_message function
             functions = FunctionTool({self.send_message})
@@ -165,7 +181,7 @@ class RoutingAgent:
             self.current_thread = self.agents_client.threads.create()
 
             return self.azure_agent
-            
+
         except Exception as e:
             print(f"Error creating Azure AI agent: {e}")
             raise
@@ -174,24 +190,24 @@ class RoutingAgent:
 
         if not hasattr(self, 'azure_agent') or not self.azure_agent:
             return "Azure AI Agent not initialized. Please ensure the agent is properly created."
-        
+
         if not hasattr(self, 'current_thread') or not self.current_thread:
             return "Azure AI Thread not initialized. Please ensure the agent is properly created."
-        
+
         try:
             # Create message in the thread
             self.agents_client.messages.create(
-                thread_id=self.current_thread.id, 
-                role=MessageRole.User, 
+                thread_id=self.current_thread.id,
+                role=MessageRole.User,
                 content=user_message
             )
 
             # Create and run the agent
             run = self.agents_client.runs.create(
-                thread_id=self.current_thread.id, 
+                thread_id=self.current_thread.id,
                 agent_id=self.azure_agent.id
             )
-            
+
             # Need to await send_message function
             while run.status in ["queued", "in_progress", "requires_action"]:
                 time.sleep(1)
@@ -200,26 +216,33 @@ class RoutingAgent:
                 if run.status == "requires_action":
                     tool_calls = run.required_action.submit_tool_outputs.tool_calls
                     tool_outputs = []
-                    
+
                     for tool_call in tool_calls:
                         function_name = tool_call.function.name
                         function_args = json.loads(tool_call.function.arguments)
-                        
+
                         if function_name == "send_message":
                             try:
-                                result = await self.send_message(agent_name=function_args["agent_name"], task=function_args["task"])
-                                output = json.dumps(result.model_dump() if hasattr(result, 'model_dump') else str(result))
+                                result = await self.send_message(
+                                    agent_name=function_args["agent_name"],
+                                    task=function_args["task"]
+                                )
+                                output = json.dumps(
+                                    result.model_dump() if hasattr(result, "model_dump") else str(result)
+                                )
 
                             except Exception as e:
                                 output = json.dumps({"error": str(e)})
                         else:
                             output = json.dumps({"error": f"Unknown function: {function_name}"})
-                        
-                        tool_outputs.append({"tool_call_id": tool_call.id,  "output": output})
-                
+
+                        tool_outputs.append({"tool_call_id": tool_call.id, "output": output})
+
                     # Submit the tool outputs
                     self.agents_client.runs.submit_tool_outputs(
-                        thread_id=self.current_thread.id, run_id=run.id, tool_outputs=tool_outputs
+                        thread_id=self.current_thread.id,
+                        run_id=run.id,
+                        tool_outputs=tool_outputs
                     )
 
             if run.status == "failed":
@@ -228,18 +251,21 @@ class RoutingAgent:
                 return f"Error processing request: {error_info}"
 
             # Return the response
-            messages = self.agents_client.messages.list(thread_id=self.current_thread.id, order=ListSortOrder.DESCENDING)
+            messages = self.agents_client.messages.list(
+                thread_id=self.current_thread.id,
+                order=ListSortOrder.DESCENDING
+            )
             for msg in messages:
                 if msg.role == MessageRole.AGENT and msg.text_messages:
                     last_text = msg.text_messages[-1]
                     return last_text.text.value
-            
+
             return "No response received from agent."
-            
+
         except Exception as e:
             error_msg = f"Error in process_user_message: {e}"
             print(error_msg)
-            return f"An error occurred while processing your message."
+            return "An error occurred while processing your message."
 
 
 async def _get_initialized_routing_agent_sync() -> RoutingAgent:
@@ -247,18 +273,21 @@ async def _get_initialized_routing_agent_sync() -> RoutingAgent:
     async def _async_main() -> RoutingAgent:
         routing_agent_instance = await RoutingAgent.create(
             remote_agent_addresses=[
-                f"http://{os.environ["SERVER_URL"]}:{os.environ["TITLE_AGENT_PORT"]}",
-                f"http://{os.environ["SERVER_URL"]}:{os.environ["OUTLINE_AGENT_PORT"]}",
+                f"http://{os.environ['SERVER_URL']}:{os.environ['TITLE_AGENT_PORT']}",
+                f"http://{os.environ['SERVER_URL']}:{os.environ['OUTLINE_AGENT_PORT']}",
             ]
         )
+
         # Create the Azure AI agent
         routing_agent_instance.create_agent()
+
         return routing_agent_instance
 
     try:
         return asyncio.run(_async_main())
     except RuntimeError as e:
         raise
+
 
 # Initialize the routing agent
 routing_agent = _get_initialized_routing_agent_sync()
