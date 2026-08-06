@@ -161,10 +161,3 @@ When your fine-tuned model is ready, you can test it like you tested your deploy
 
     `What's the best way to get around the city?`
 
-## Clean up
-
-If you've finished exploring Microsoft Foundry, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
-
-1. Open the [Azure portal](https://portal.azure.com) and view the contents of the resource group where you deployed the resources used in this exercise.
-1. On the toolbar, select **Delete resource group**.
-1. Enter the resource group name and confirm that you want to delete it.
