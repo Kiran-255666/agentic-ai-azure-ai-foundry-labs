@@ -105,7 +105,7 @@ You'll need an endpoint to connect to the model from a client application. In th
 
 The initial application files you'll need to develop your chat application are provided in a GitHub repo.
 
-1. In a browser like Microsoft Edge, browse the URL: https://github.com/Kiran-255666/Agentic_AI_Training_Foundations.git and download the repository into your VM.
+1. In a browser like Microsoft Edge, browse the URL: https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs.git and download the repository into your VM.
 2. The Repository will get download in Downloads folder, right click the file and select Extract all to unzip the zip file.
 3. In Visual Studio Code, click on File menu, then select open Folder.
 4. Select the folder that you have unzipped in the previous step.
