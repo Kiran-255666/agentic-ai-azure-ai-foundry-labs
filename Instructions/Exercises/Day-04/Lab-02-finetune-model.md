@@ -57,7 +57,7 @@ Next, let's deploy a model that you'll use to get a performance baseline.
 
 Because fine-tuning a model takes some time to complete, you'll start the fine-tuning job now and come back to it after exploring the base gpt-5 model you already deployed.
 
-1. Download the [training dataset](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs/raw/refs/heads/main/labfiles/Day-04/Lab-02-finetune-model/travel-finetune-hotel.jsonl) at `https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs/raw/refs/heads/main/labfiles/Day-04/Lab-02-finetune-model/travel-finetune-hotel.jsonl` and save it as a JSONL file locally.
+1. Download the [training dataset](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs/blob/main/labfiles/Day-04/Lab-02-finetune-model/travel-finetune-hotel.jsonl) at `https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs/blob/main/labfiles/Day-04/Lab-02-finetune-model/travel-finetune-hotel.jsonl` and save it as a JSONL file locally.
 
     > **Note**: Your device might default to saving the file as a .txt file. Select all files and remove the .txt suffix to ensure you're saving the file as JSONL.
 
