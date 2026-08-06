@@ -5,7 +5,7 @@ lab:
   level: 300
   duration: 30
   islab: true
-  status: 'released'
+  status: 'released't
 ---
 
 # Create a generative AI app that uses tools
@@ -118,7 +118,7 @@ The initial application files you'll need to develop your chat application are p
 
     > **Tip**: If you are prompted to install dependencies, you can install the ones in the *requirements.txt* file in the */labfiles/tools/python/tools-app* folder; but it's OK if you don't - we'll install them later!
 
-1. In the Explorer pane, navigate to the folder containing the application code files at **lab04-rag/python/tools-app**. The application files include:
+1. In the Explorer pane, navigate to the folder containing the application code files at **Day-04/Lab-01-use-own-data-Rag/python/tools-app**. The application files include:
     - **brochures** (a folder containing Margie's Travel brochures)
     - **.env** (the application configuration file)
     - **requirements.txt** (the Python package dependencies that need to be installed)
@@ -128,7 +128,7 @@ The initial application files you'll need to develop your chat application are p
 
     > **Note**: Opening the terminal in Visual Studio Code will automatically activate the Python environment. You may need to enable running scripts on your system.
 
-1. Ensure that the terminal is open in the **/lab04-rag/python/tools-app** folder with the prefix **(.venv)** to indicate that the Python environment you created is active.
+1. Ensure that the terminal is open in the **Day-04/Lab-01-use-own-data-Rag/python/tools-appp** folder with the prefix **(.venv)** to indicate that the Python environment you created is active.
 
     ```powershell
     python -m venv .venv
@@ -143,7 +143,7 @@ The initial application files you'll need to develop your chat application are p
     pip install -r requirements.txt
     ```
 
-1. In the **Explorer** pane, in the **/labfiles/tools/python/tools-app** folder, select the **.env** file to open it. Then update the configuration values to include the **Azure OpenAI Endpoint** and the name assigned to the deployment for the **gpt-5.2** model.
+1. In the **Explorer** pane, in the **Day-04/Lab-01-use-own-data-Rag/python/tools-app** folder, select the **.env** file to open it. Then update the configuration values to include the **Azure OpenAI Endpoint** and the name assigned to the deployment for the **gpt-5.2** model.
 
     > **Tip**: Copy the **Azure OpenAI Endpoint** (not the project endpoint!) from the project home page in the Foundry portal, and enter the exact deployment name assigned to your deployment in the `MODEL_DEPLOYMENT` setting.
 
@@ -151,7 +151,7 @@ The initial application files you'll need to develop your chat application are p
 
 ### Write code to implement chat with tools (We have already updated the mentioned files with the code mentioned in the instruction, but we would highly suggest going through it before executing it)
 
-1. In the **Explorer** pane, in the **/lab04-rag/python/tools-app** folder, select the **tools-app.py** file to open it.
+1. In the **Explorer** pane, in the **Day-04/Lab-01-use-own-data-Rag/python/tools-app** folder, select the **tools-app.py** file to open it.
 1. Review the existing code. You will add code to use the OpenAI SDK to access your model.
 
     > **Tip**: As you add code to the code file, be sure to maintain the correct indentation.
