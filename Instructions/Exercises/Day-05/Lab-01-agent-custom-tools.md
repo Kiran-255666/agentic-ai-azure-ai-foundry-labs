@@ -463,22 +463,4 @@ Now that you've created the agent with the function tools, you can send messages
 
     You can also use `deactivate` to exit the Python virtual environment in the terminal.
 
-## Clean up
 
-When you've finished exploring the Foundry Toolkit for VS Code extension, you should clean up the resources to avoid incurring unnecessary Azure costs.
-
-### Delete your model
-
-1. In VS Code, refresh the **Azure Resources** view.
-
-1. Expand the **Models** subsection.
-
-1. Right-click on your deployed model and select **Delete**.
-
-### Delete the resource group
-
-1. Open the [Azure portal](https://portal.azure.com).
-
-1. Navigate to the resource group containing your Microsoft Foundry resources.
-
-1. Select **Delete resource group** and confirm the deletion.
