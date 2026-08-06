@@ -492,10 +492,4 @@ When the agent starts, try these prompts to test different capabilities:
 
 Observe how the agent uses both file search (for policy questions) and code interpreter (for data analysis) to fulfill your requests. The code interpreter will analyze the CSV data, perform calculations, and can even generate visualizations. Type `exit` when done testing.
 
-## Cleanup
 
-To avoid unnecessary Azure charges, delete the resources you created:
-
-1. In the Foundry portal, navigate to your project
-1. Select **Settings** > **Delete project**
-1. Alternatively, delete the entire resource group from the Azure portal
