@@ -418,11 +418,4 @@ In this exercise, you:
 
 This demonstrates how to integrate AI agents with Foundry IQ to create intelligent applications that can search and retrieve information from enterprise knowledge bases while maintaining conversational context.
 
-## Clean up
 
-If you've finished exploring Azure AI Agent Service and Foundry IQ, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
-
-1. In a web browser, open the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`.
-1. Navigate to the resource group containing your Foundry resource and AI Search resources.
-1. On the toolbar, select **Delete resource group**.
-1. Enter the resource group name and confirm that you want to delete it.
