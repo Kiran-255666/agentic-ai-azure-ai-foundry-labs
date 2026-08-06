@@ -35,19 +35,19 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
 2. Locate the project that is already created with the name **hakunamatata1**. Select the **New Foundry** toggle in the top banner to switch to the new Foundry interface (you can switch back to the classic interface later using the same toggle).
 
-    ![Screenshot of the hakunamatata1 project with the New Foundry toggle enabled.](../../Media/foundry-new-interface.png)
+    ![Screenshot of the hakunamatata1 project with the New Foundry toggle enabled.](../../../../media/foundry-new-interface.png)
 
 3. Hover over the **hakunamatata1** project card. A three-dot menu icon will appear — select it to reveal two options: **Open project** and **Manage project**. Select **Open project**.
 
-    ![Screenshot of the hakunamatata1 project card with the three-dot menu showing Open project and Manage project options.](../../Media/foundry-open-project-menu.png)
+    ![Screenshot of the hakunamatata1 project card with the three-dot menu showing Open project and Manage project options.](../../../../media/foundry-open-project-menu.png)
 
 4. Selecting **Open project** redirects you to the project's Home page, where you'll see the **Welcome** screen with options to **Use a model**, **Build an agent**, and **Code an agent**, along with your **API key**, **Project endpoint**, and **Azure OpenAI endpoint** fields. Below that, you'll find the **Model selection** section and a list of your **Recent work** (agents and models).
 
-    ![Screenshot of the project Home page in the new Foundry interface showing model selection and recent work.](../../Media/foundry-project-home-new.png)
+    ![Screenshot of the project Home page in the new Foundry interface showing model selection and recent work.](../../../../media/foundry-project-home-new.png)
 
 5. Select the **New Foundry** toggle in the top banner again to switch back to the classic Foundry interface.
 
-    ![Screenshot of the top banner with the New Foundry toggle switched off to return to the classic interface.](../../Media/foundry-classic-toggle.png)
+    ![Screenshot of the top banner with the New Foundry toggle switched off to return to the classic interface.](../../../../media/foundry-classic-toggle.png)
 
 ## Verify the deployed model
 
@@ -56,7 +56,7 @@ Next, let's verify the deployed model that you'll use in your chat application.
 
 1. Once the Microsoft Foundry project is open, locate **Playgrounds** in the left panel and double-click it. You'll see the **Chat Playground** option — select the **Try the Chat Playground** button. Verify that the **gpt-5.4-mini** model is auto-selected.
 
-    ![Screenshot of the Chat Playground with the gpt-5.4-mini model auto-selected.](../../Media/foundry-chat-playground.png)
+    ![Screenshot of the Chat Playground with the gpt-5.4-mini model auto-selected.](../../../../media/foundry-chat-playground.png)
 
 ## Experiment with tools in the playground
 
@@ -97,7 +97,7 @@ You'll need an endpoint to connect to the model from a client application. In th
 
 1. Note the **Azure OpenAI Endpoint** displayed there.
 
-    ![Screenshot of the Azure OpenAI Endpoint on the Foundry project Home page](../../Media/azure-openai-endpoint.png)
+    ![Screenshot of the Azure OpenAI Endpoint on the Foundry project Home page](../../../../media/azure-openai-endpoint.png)
 
     > **Tip**: You'll use the **Azure OpenAI Endpoint** in this exercise, <u>not</u> the project endpoint! You can find this endpoint directly on the [Microsoft Foundry](https://ai.azure.com) project Home page, listed alongside the **API key** and **Project endpoint** fields.
 
@@ -257,7 +257,7 @@ The initial application files you'll need to develop your chat application are p
 
     The program should run in the terminal (if not, resolve any errors and try again).
 
-    ![Screenshot showing the tools-app application starting in the terminal and creating the vector store.](../../Media/application-start-1.jpeg)
+    ![Screenshot showing the tools-app application starting in the terminal and creating the vector store.](../../../../media/application-start-1.jpeg)
 
 1. When prompted with `Enter a question (or type "quit" to exit):`, ask `What's happening in San Francisco next month?` and review the response from your generative AI model.
 
@@ -265,12 +265,12 @@ The initial application files you'll need to develop your chat application are p
 
     The response should include information retrieved using the *web_search* tool.
 
-    ![Screenshot showing the application response to the San Francisco query using the web_search tool.](../../Media/web-search-response-1.jpeg)
+    ![Screenshot showing the application response to the San Francisco query using the web_search tool.](../../../../media/web-search-response-1.jpeg)
 
 1. Try this follow-up question: `What hotels does Margie's Travel offer there?`
 
     The response should include information retrieved using the *file_search* tool.
 
-    ![Screenshot showing the application response to the hotel query using the file_search tool.](../../Media/file-search-response-1.jpeg)
+    ![Screenshot showing the application response to the hotel query using the file_search tool.](../../../../media/file-search-response-1.jpeg)
 
 1. When you're done, type `quit` to exit the application.

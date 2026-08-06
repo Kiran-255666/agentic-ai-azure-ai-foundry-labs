@@ -67,17 +67,17 @@ In this exercise, you will create a Dataverse table that will be used as a knowl
 
 1. At the top of the page, verify that you are working in the environment you want to use for this exercise.
 
-   ![Select your environment in the Maker portal.](../media/select-powerapps-environment.png)
+   ![Select your environment in the Maker portal.](../../../media/select-powerapps-environment.png)
 
 1. In the left-hand navigation in the **Maker portal**, select **Tables**.
 
-   ![Dataverse Tables in the Maker portal.](../media/dataverse-tables.png)
+   ![Dataverse Tables in the Maker portal.](../../../media/dataverse-tables.png)
 
 1. Select the **Get started with Copilot** tile.
 
 1. In the **Get started with Copilot** dialog, select the **Table options** icon, and select **One table**.
 
-   ![Table options in the Maker portal.](../media/dataverse-table-options.png)
+   ![Table options in the Maker portal.](../../../media/dataverse-table-options.png)
 
 1. In the *Describe the tables you want Copilot to build* text box, enter the following prompt:
 
@@ -92,7 +92,7 @@ In this exercise, you will create a Dataverse table that will be used as a knowl
 
 1. A table will be created. Make a note of the name of the table.
 
-   ![Proposed table.](../media/dataverse-table-proposed.png)
+   ![Proposed table.](../../../media/dataverse-table-proposed.png)
 
 1. Select **Save and exit** and select **Save and exit** again.
 
@@ -110,7 +110,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **Cog** image.
 
-   ![Screenshot of the agent settings dialog.](../media/agent-settings-dialog.png)
+   ![Screenshot of the agent settings dialog.](../../../media/agent-settings-dialog.png)
 
 1. Leave **English (United States)** set as the primary language for the agent.
 
@@ -142,15 +142,15 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Select the **Knowledge** tab to verify the knowledge sources defined in your agent (currently there should be none).
 
-   ![Screenshot of the Knowledge page in Copilot Studio.](../media/knowledge-page.png)
+   ![Screenshot of the Knowledge page in Copilot Studio.](../../../media/knowledge-page.png)
 
 1. Select **+ Add knowledge**, and note the multiple types of knowledge source that you can add to your agent.
 
-   ![Screenshot of available Knowledge sources in Copilot Studio.](../media/knowledge-sources.png)
+   ![Screenshot of available Knowledge sources in Copilot Studio.](../../../media/knowledge-sources.png)
 
 1. In the **Upload file** section, use **select to browse** to upload the expense policy document you downloaded previously and select **Add to agent**.
 
-   ![Screenshot of adding the Expenses policy document as knowledge to your agent in Copilot Studio.](../media/knowledge-add-file.png)
+   ![Screenshot of adding the Expenses policy document as knowledge to your agent in Copilot Studio.](../../../media/knowledge-add-file.png)
 
 > [!NOTE]
 > After uploading the file, Copilot Studio begins indexing. This may take 10 minutes or longer, so you will check back after the next exercise.
@@ -185,11 +185,11 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Search for and select the *Expenses* table you created in Exercise 2
 
-   ![Screenshot of adding the Expenses table in Dataverse as knowledge to your agent in Copilot Studio.](../media/knowledge-add-dataverse.png)
+   ![Screenshot of adding the Expenses table in Dataverse as knowledge to your agent in Copilot Studio.](../../../media/knowledge-add-dataverse.png)
 
 1. Select **Add to agent**.
 
-   ![Screenshot of all knowledge sources for your agent in Copilot Studio.](../media/knowledge-added.png)
+   ![Screenshot of all knowledge sources for your agent in Copilot Studio.](../../../media/knowledge-added.png)
 
 ### Task 3.4 – Configure the Dataverse knowledge source
 
@@ -197,7 +197,7 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Select the ellipses (**⋮**) for the Dataverse table and select **Edit**.
 
-   ![Screenshot of editing a knowledge source for an agent in Copilot Studio.](../media/knowledge-edit.png)
+   ![Screenshot of editing a knowledge source for an agent in Copilot Studio.](../../../media/knowledge-edit.png)
 
 1. In the **Details** tab, for *Name*, enter `Expense Claims data`.
 
@@ -209,7 +209,7 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Enter `Expense category` and select **Add**.
 
-   ![Screenshot of adding Synonyms for a Dataverse table column.](../media/knowledge-synonyms.png)
+   ![Screenshot of adding Synonyms for a Dataverse table column.](../../../media/knowledge-synonyms.png)
 
 1. Select **Done**.
 
@@ -235,7 +235,7 @@ Check whether the uploaded file has completed indexing. If indexing is still in 
 
 1. In the **Test** pane, select the ellipses (**...**) next to the variables **{x}** icon, and toggle **Show activity map when testing** to **On** and **Track between topics** to **Off**.
 
-   ![Show activity map.](../media/show-activity-map.png)
+   ![Show activity map.](../../../media/show-activity-map.png)
 
 1. At the top of the **Test** pane, select the **Start new test session** icon **+**.
 
@@ -245,7 +245,7 @@ Check whether the uploaded file has completed indexing. If indexing is still in 
 
 1. The response should be grounded using the uploaded expense policy document and may also reference other configured knowledge sources.
 
-   ![Screenshot of the conversation.](../media/knowledge-conversation-1.png)
+   ![Screenshot of the conversation.](../../../media/knowledge-conversation-1.png)
 
 1. At the top of the **Test** pane, select the **Start new test session** icon **+**.
 
@@ -255,7 +255,7 @@ Check whether the uploaded file has completed indexing. If indexing is still in 
 
 1. The agent should search all the knowledge sources and generate a response using the Dataverse table.
 
-   ![Screenshot of the conversation.](../media/knowledge-conversation-2.png)
+   ![Screenshot of the conversation.](../../../media/knowledge-conversation-2.png)
 
 1. At the top of the **Test** pane, select the **Start new test session** icon **+**.
 
@@ -265,7 +265,7 @@ Check whether the uploaded file has completed indexing. If indexing is still in 
 
 1. The agent should search all the knowledge sources and generate a response using the public website.
 
-   ![Screenshot of the conversation.](../media/knowledge-conversation-3.png)
+   ![Screenshot of the conversation.](../../../media/knowledge-conversation-3.png)
 
 ## Exercise 4 - Generative AI settings
 
@@ -281,7 +281,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. In the **Knowledge** section, set **Use information from the Web** to **Off**.
 
-   ![Screenshot of knowledge settings for agent.](../media/knowledge-agent-settings.png)
+   ![Screenshot of knowledge settings for agent.](../../../media/knowledge-agent-settings.png)
 
 1. Select **Save**
 
@@ -301,7 +301,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. Select the **Create generative answers** node.
 
-   ![Screenshot of generative answers node.](../media/generative-answers-node.png)
+   ![Screenshot of generative answers node.](../../../media/generative-answers-node.png)
 
 1. Select **Edit** for **Data sources**.
 
@@ -311,7 +311,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. Select and enable **Web search**.
   When enabled, Web search allows generative answers to supplement configured knowledge sources with public web information.
-   ![Screenshot of generative answers properties.](../media/generative-answers-properties.png)
+   ![Screenshot of generative answers properties.](../../../media/generative-answers-properties.png)
 
 1. Select **Save**.
 
@@ -329,7 +329,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. The knowledge sources will not provide an answer but the agent will use generative answers to search the web to generate a response.
 
-   ![Screenshot of the conversation in the Conversational Boosting topic.](../media/knowledge-conversation-4.png)
+   ![Screenshot of the conversation in the Conversational Boosting topic.](../../../media/knowledge-conversation-4.png)
 
 ### Task 4.3 – Fallback topic
 
@@ -361,7 +361,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. The knowledge sources and generative answers will not provide an answer. If no suitable grounded or generative response is available, the conversation may route to the Fallback topic.
 
-   ![Screenshot of the conversation using the Fallback topic.](../media/knowledge-conversation-5.png)
+   ![Screenshot of the conversation using the Fallback topic.](../../../media/knowledge-conversation-5.png)
 
 ## Exercise 5 - Publish the agent to Microsoft Teams
 
@@ -391,7 +391,7 @@ In this exercise, you will publish the agent to Microsoft Teams, first ensuring 
 
 1. Select the **Channels** tab.
 
-   ![Screenshot of Channels tab in Copilot Studio.](../media/channels-tab-teams.png)
+   ![Screenshot of Channels tab in Copilot Studio.](../../../media/channels-tab-teams.png)
 
 1. Select the **Microsoft 365 and Microsoft Teams** tile.
 
@@ -399,7 +399,7 @@ In this exercise, you will publish the agent to Microsoft Teams, first ensuring 
 
 1. Select **Add channel**.
 
-   ![Screenshot Teams channel Copilot Studio.](../media/channel-teams.png)
+   ![Screenshot Teams channel Copilot Studio.](../../../media/channel-teams.png)
 
 1. Select **See agent in Teams**.
 
@@ -409,13 +409,13 @@ In this exercise, you will publish the agent to Microsoft Teams, first ensuring 
 
 1. Select **Add** to add the agent to Teams.
 
-   ![Screenshot of dialog to add the app to Teams.](../media/channel-teams-app.png)
+   ![Screenshot of dialog to add the app to Teams.](../../../media/channel-teams-app.png)
 
 1. Select **Open** and wait for the agent to load in Teams.
 
 1. Test the published agent in Microsoft Teams.
 
-    ![Screenshot of the agent in Teams.](../media/channel-teams-test.png)
+    ![Screenshot of the agent in Teams.](../../../media/channel-teams-test.png)
 
 ## Summary
 

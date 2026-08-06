@@ -70,7 +70,7 @@ In this exercise, you will create an agent by using a template, and then test th
 
 1. Under **Start with an agent template** section, select the **Safe Travels** template.
 
-   ![Safe Travels template.](../media/select-template.png)
+   ![Safe Travels template.](../../../media/select-template.png)
 
 1. In the upper-right of the page, select the ellipses (**...**) and select **Edit advanced settings**.
 
@@ -92,7 +92,7 @@ In this exercise, you will create an agent by using a template, and then test th
 
 1. Select the **Conversational Start** topic. Review the contents of the **Message** node. Note that the contents of the message are displayed in the **Test** pane.
 
-   ![Conversation Start topic from the Safe Travels template.](../media/safe-travels-conversation-start-topic.png)
+   ![Conversation Start topic from the Safe Travels template.](../../../media/safe-travels-conversation-start-topic.png)
 
 1. In the drop-down in the upper-left of the page that is showing Conversation Start, select the custom **What can I ask** topic.
 
@@ -102,7 +102,7 @@ In this exercise, you will create an agent by using a template, and then test th
 
 1. In the **Test** pane, select the ellipses (**...**) next to the variables **{x}** icon, and toggle **Track between topics** to **On**.
 
-   ![Track between topics.](../media/track-between-topics.png)
+   ![Track between topics.](../../../media/track-between-topics.png)
 
 1. Enter the following prompt:
 
@@ -126,7 +126,7 @@ In this exercise, you will create an agent by using a template, and then test th
 
    The response should be generated using the configured knowledge source and may reference the Conversational boosting system topic.
 
-   ![Screenshot of the test pane.](../media/safe-travels-test.png)
+   ![Screenshot of the test pane.](../../../media/safe-travels-test.png)
 
 1. Enter the following prompt:
 
@@ -153,7 +153,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **Cog** image.
 
-   ![Screenshot of the agent settings dialog.](../media/agent-settings-dialog.png)
+   ![Screenshot of the agent settings dialog.](../../../media/agent-settings-dialog.png)
 
 1. Leave **English (United States)** set as the primary language for the agent.
 
@@ -173,7 +173,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
    Your agent will be created.
 
-   ![Screenshot of the created agent.](../media/new-agent-overview.png)
+   ![Screenshot of the created agent.](../../../media/new-agent-overview.png)
 
    Once your agent has been provisioned, you may proceed with configuring your agent.
 
@@ -216,7 +216,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Select the **Knowledge** tab.
 
-   ![Knowledge tab in Copilot Studio portal.](../media/knowledge-tab.png)
+   ![Knowledge tab in Copilot Studio portal.](../../../media/knowledge-tab.png)
 
 1. Select **+ Add knowledge**.
 
@@ -270,7 +270,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. In the **Test** pane, select the ellipses (**...**) next to the variables **{x}** icon, and toggle **Show activity map when testing** to **On** and **Track between topics** to **Off**.
 
-   ![Show activity map.](../media/show-activity-map.png)
+   ![Show activity map.](../../../media/show-activity-map.png)
 
 1. At the top of the **Test** pane, select the **Start new test session** icon **+**.
 
@@ -282,7 +282,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
    The **Activity map** should be displayed, showing that knowledge sources were used to generate the response.
 
-   ![Activity map.](../media/activity-map.png)
+   ![Activity map.](../../../media/activity-map.png)
 
 1. Close the **Test** pane.
 
@@ -292,7 +292,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Select the **Channels** tab.
 
-   ![Screenshot of Channels in Copilot Studio.](../media/channels-tab.png)
+   ![Screenshot of Channels in Copilot Studio.](../../../media/channels-tab.png)
 
 1. Select the **Demo website** channel. This channel is useful for quickly testing and previewing your agent experience.
 

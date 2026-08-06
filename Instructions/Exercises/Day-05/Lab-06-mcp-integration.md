@@ -32,11 +32,11 @@ Before starting this exercise, ensure you have:
 
 1. Before starting the lab, install Azure CLI using the following link: [https://aka.ms/installazurecliwindows](https://aka.ms/installazurecliwindows). Click the link to download the installer. The download will start automatically and the installer will be available in your **Downloads** folder. If the download does not start automatically, copy and paste the link into your browser.
 
-    ![Screenshot of the Azure CLI installer downloaded in the Downloads folder.](../../Media/azure-cli-download.png)
+    ![Screenshot of the Azure CLI installer downloaded in the Downloads folder.](../../../../media/azure-cli-download.png)
 
 2. After the download is complete, run the installer and follow the installation steps.
 
-    ![Screenshot of the Azure CLI installation setup wizard.](../../Media/azure-cli-install-wizard.png)
+    ![Screenshot of the Azure CLI installation setup wizard.](../../../../media/azure-cli-install-wizard.png)
 
 As a developer, you may spend time working in the Microsoft Foundry portal, but most development tasks are typically performed in Visual Studio Code. The Foundry Toolkit extension enables you to work with Foundry project resources directly within Visual Studio Code, allowing you to stay within your development environment.
 
@@ -48,13 +48,13 @@ As a developer, you may spend time working in the Microsoft Foundry portal, but 
 
     > **Note**: The extension is currently listed as **Foundry Toolkit for VS Code**, but some VS Code labels, commands, or older screenshots may still refer to **AI Toolkit**. In this lab, treat those names as referring to the same extension experience. Below is a snippet of the new version, which is the official **Foundry Toolkit for VS Code** extension published by Microsoft.
 
-    ![Screenshot of the Foundry Toolkit for VS Code extension in the Extensions Marketplace.](../../Media/foundry-toolkit-extension.png)
+    ![Screenshot of the Foundry Toolkit for VS Code extension in the Extensions Marketplace.](../../../../media/foundry-toolkit-extension.png)
 
 4. After installing the extension, select its icon in the sidebar to open the Foundry Toolkit view.
 
     You'll initially see the default **My Resources** and **Developer Tools** sections in the panel, but they won't be populated with your actual project data. To use the extension's full functionality and complete this lab, you need to sign in to your Azure account.
 
-    ![Screenshot of the Foundry Toolkit sidebar showing My Resources and Developer Tools sections before sign-in.](../../Media/foundry-toolkit-sidebar.png)
+    ![Screenshot of the Foundry Toolkit sidebar showing My Resources and Developer Tools sections before sign-in.](../../../../media/foundry-toolkit-sidebar.png)
 
 5. Open the integrated terminal (**Ctrl+Shift+`**) and run the following command to sign in to Azure:
 
@@ -98,7 +98,7 @@ As a developer, you may spend time working in the Microsoft Foundry portal, but 
 
     > **Tip**: To switch to a different project, select **Models** in the left panel under **My Resources**. You'll see two options: **Switch Project** and **Create Project**. Select **Switch Project** to change your default Azure Resources project.
 
-    ![Screenshot of the Foundry Toolkit sidebar showing the active default project under My Resources after signing in.](../../Media/foundry-toolkit-default-project.png)
+    ![Screenshot of the Foundry Toolkit sidebar showing the active default project under My Resources after signing in.](../../../../media/foundry-toolkit-default-project.png)
 
 ## Download the starter code repository
 
@@ -123,7 +123,7 @@ For this exercise, you'll use starter code that will help you connect to your Fo
 
     > **Tip**: You can find these values in the [Microsoft Foundry portal](https://ai.azure.com). Open your project's **Home** page, and you'll see the **Project endpoint** and **Azure OpenAI endpoint** fields listed alongside your API key. Select the copy icon next to **Project endpoint** to copy it directly into your `.env` file.
 
-    ![Screenshot of the Microsoft Foundry project Home page showing the API key, Project endpoint, and Azure OpenAI endpoint fields.](../../Media/foundry-project-home-endpoints.png)
+    ![Screenshot of the Microsoft Foundry project Home page showing the API key, Project endpoint, and Azure OpenAI endpoint fields.](../../../../media/foundry-project-home-endpoints.png)
 
     > **Security Note**: Never share your API key, endpoints, or `.env` file with anyone, or commit them to a public repository. Treat these values as sensitive credentials at all times.
 
