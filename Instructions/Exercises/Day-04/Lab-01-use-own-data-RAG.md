@@ -236,10 +236,4 @@ The initial application files you'll need to develop your chat application are p
 
 1. When you're finished, enter `quit` to exit the program.
 
-## Clean up
 
-If you've finished exploring Microsoft Foundry, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
-
-1. Open the [Azure portal](https://portal.azure.com) and view the contents of the resource group where you deployed the resources used in this exercise.
-1. On the toolbar, select **Delete resource group**.
-1. Enter the resource group name and confirm that you want to delete it.
