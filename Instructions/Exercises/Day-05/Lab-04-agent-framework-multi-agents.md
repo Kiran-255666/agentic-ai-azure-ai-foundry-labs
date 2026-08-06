@@ -263,22 +263,4 @@ Now you're ready to run your code and watch your AI agents collaborate.
 
 1. When you're finished, enter `deactivate` in the terminal to exit the Python virtual environment.
 
-## Clean up
 
-If you've finished exploring Azure AI Agent Service, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs.
-
-### Delete your model
-
-1. In VS Code, refresh the **Azure Resources** view.
-
-1. Expand the **Models** subsection.
-
-1. Right-click on your deployed model and select **Delete**.
-
-### Delete the resource group
-
-1. Open the [Azure portal](https://portal.azure.com).
-
-1. Navigate to the resource group containing your Microsoft Foundry resources.
-
-1. Select **Delete resource group** and confirm the deletion.
