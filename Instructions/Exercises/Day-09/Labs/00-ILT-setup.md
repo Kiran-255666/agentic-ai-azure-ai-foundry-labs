@@ -27,7 +27,7 @@ Before you start the lab exercises, you must create a development environment fo
 
 1. Select the ellipses (**...**) for the **Contoso (default)** environment and select **Add Dataverse**.
 
-   ![Add Dataverse to the default environment in the Power Platform Admin center.](../../../media/add-dataverse.png)
+   ![Add Dataverse to the default environment in the Power Platform Admin center.](../../media/add-dataverse.png)
 
 1. Leave all of the default settings and select **Add**.
 
@@ -39,7 +39,7 @@ Before you start the lab exercises, you must create a development environment fo
    - **Region**: default region
    - **Name**: *Your name*
 
-   ![Create an environment in the Power Platform Admin center.](../../../media/create-environment.png)
+   ![Create an environment in the Power Platform Admin center.](../../media/create-environment.png)
 
 1. Expand **Change default settings** and configure the following:
    - **Environment group**: None
@@ -59,7 +59,7 @@ Before you start the lab exercises, you must create a development environment fo
    > [!NOTE]
    > Environment provisioning can take several minutes depending on tenant configuration.
 
-   ![Environment created in the Power Platform Admin center.](../../../media/environment-created.png)
+   ![Environment created in the Power Platform Admin center.](../../media/environment-created.png)
 
 1. In a new browser tab, navigate to `https://copilotstudio.microsoft.com/` and sign in if prompted.
 
@@ -80,7 +80,7 @@ Before you start the lab exercises, you must create a development environment fo
 
 1. In the upper right corner of the page, switch environments by using the Environment Selector and select the environment you created.
 
-   ![Select your environment in the Copilot Studio.](../../../media/select-environment.png)
+   ![Select your environment in the Copilot Studio.](../../media/select-environment.png)
 
 ### Task 1.4 - Create a solution
 
@@ -88,7 +88,7 @@ Before you start the lab exercises, you must create a development environment fo
 
 1. You should see several solutions including the *Default Solution* and the *Common Data Services Default Solution*.
 
-   ![List of solutions in Maker portal.](../../../media/solutions-list.png)
+   ![List of solutions in Maker portal.](../../media/solutions-list.png)
 
 1. Select **+ New solution**.
 
@@ -113,7 +113,7 @@ Before you start the lab exercises, you must create a development environment fo
    > [!NOTE]
    > Setting this as your preferred solution ensures new assets created during later labs are added to the Lab Exercises solution by default.
 
-   ![New solution.](../../../media/new-solution.png)
+   ![New solution.](../../media/new-solution.png)
 
 1. Select **Create**.
 

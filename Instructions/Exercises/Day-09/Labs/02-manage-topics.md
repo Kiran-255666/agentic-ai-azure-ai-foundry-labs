@@ -77,7 +77,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **Cog** image.
 
-   ![Screenshot of the agent settings dialog.](../../../media/agent-settings-dialog.png)
+   ![Screenshot of the agent settings dialog.](../../media/agent-settings-dialog.png)
 
 1. Leave **English (United States)** set as the primary language for the agent.
 
@@ -111,7 +111,7 @@ In this exercise, you will disable the Escalate system topic as the agent will n
 
 1. Toggle **Enabled** to **Off** for the **Escalate** topic.
 
-   ![Topics removed and disabled in Copilot Studio portal.](../../../media/topic-escalate-disabled.png)
+   ![Topics removed and disabled in Copilot Studio portal.](../../media/topic-escalate-disabled.png)
 
 Disabling unused topics helps reduce ambiguity when multiple topics or generative responses could handle the same request.
 
@@ -123,9 +123,9 @@ In this exercise, you will use Copilot to create a topic from a description. Thi
 
 1. Select **+ Add a topic** and select **Add from description with Copilot**. A new dialog appears.
 
-   ![Create topic with copilot option.](../../../media/topic-create-from-description-1.png)
+   ![Create topic with copilot option.](../../media/topic-create-from-description-1.png)
 
-   ![Create topic with copilot dialog.](../../../media/topic-create-from-description-2.png)
+   ![Create topic with copilot dialog.](../../media/topic-create-from-description-2.png)
 
 1. In the **Name your topic** text box, enter **`Customer Details`**.
 
@@ -141,11 +141,11 @@ In this exercise, you will use Copilot to create a topic from a description. Thi
 
 1. If the **Edit with Copilot** panel is not shown on the right side of the **Customer Details** pane, select the **Copilot** icon in the upper part of the authoring canvas.
 
-   ![Screenshot of the Edit with Copilot icon.](../../../media/edit-with-copilot.png)
+   ![Screenshot of the Edit with Copilot icon.](../../media/edit-with-copilot.png)
 
 1. Select the second **Question** node **What is your email address?**
 
-   ![Screenshot of the Edit with Copilot icon.](../../../media/copilot-email-address-node.png)
+   ![Screenshot of the Edit with Copilot icon.](../../media/copilot-email-address-node.png)
 
 1. In the **Edit with Copilot** panel, in the **What do you want to do?** field, enter the following text:
 
@@ -153,9 +153,9 @@ In this exercise, you will use Copilot to create a topic from a description. Thi
 
 1. Select **Update**.
 
-   ![Screenshot of the Edit with Copilot panel with prompt.](../../../media/edit-with-copilot-panel.png)
+   ![Screenshot of the Edit with Copilot panel with prompt.](../../media/edit-with-copilot-panel.png)
 
-   ![Screenshot of the message updated to include the Name variable.](../../../media/message-updated-name-variable.png)
+   ![Screenshot of the message updated to include the Name variable.](../../media/message-updated-name-variable.png)
 
    > [!NOTE]
    > The updated message should reference the **Name** variable collected in the previous question node and should look similar to the screenshot. If **Edit with Copilot** did not update the question node correctly, select **Undo**, and retry with a different prompt.
@@ -176,11 +176,11 @@ In addition to modifying existing nodes, you can use Copilot to add new ones.
 
    A message node with an Adaptive Card is added to the end of the topic.
 
-   ![Screenshot of the message node with an Adaptive Card.](../../../media/message-node-adaptive-card.png)
+   ![Screenshot of the message node with an Adaptive Card.](../../media/message-node-adaptive-card.png)
 
 1. Select the **Media** box in the Adaptive Card. The Adaptive Card properties should appear on the right of the page.
 
-   ![Screenshot of the Adaptive Card properties.](../../../media/adaptive-card-properties.png)
+   ![Screenshot of the Adaptive Card properties.](../../media/adaptive-card-properties.png)
 
    Your Adaptive Card formula should look similar to the one above. If your Adaptive Card differs significantly, you can replace it with this formula:
 
@@ -231,7 +231,7 @@ In addition to modifying existing nodes, you can use Copilot to add new ones.
 
 1. A new question node is added to the end of the topic with options for the user to select.
 
-   ![Screenshot of the new question node with yes and no options.](../../../media/new-question-node.png)
+   ![Screenshot of the new question node with yes and no options.](../../media/new-question-node.png)
 
 1. Select **Save**.
 
@@ -251,7 +251,7 @@ Enable variables to be accessed by other topics.
 
 1. Select the right-hand check boxes for the three topic variables. This makes the variables available across other topics in the agent.
 
-   ![Screenshot of the variables pane.](../../../media/variables-pane.png)
+   ![Screenshot of the variables pane.](../../media/variables-pane.png)
 
 1. Select **Save**.
 
@@ -275,7 +275,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
    `Use this topic when a repair estimate for an insurance claim must be booked with the customer`
 
-   ![Screenshot of the topic details dialog ](../../../media/topic-details.png)
+   ![Screenshot of the topic details dialog ](../../media/topic-details.png)
 
 1. Select **Save**.
 
@@ -290,7 +290,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 1. Select the **+** icon under the Trigger node and select **Send a message**.
 
-   ![Screenshot of adding a node.](../../../media/add-message-node.png)
+   ![Screenshot of adding a node.](../../media/add-message-node.png)
 
 1. In the **Enter a message** field, enter the following text:
 
@@ -304,7 +304,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 1. Select **Topic management** \> **Go to another topic** \> **Customer Details**.
 
-   ![Screenshot of adding a topic management node.](../../../media/topic-management-node.png)
+   ![Screenshot of adding a topic management node.](../../media/topic-management-node.png)
 
 1. Select **Save**.
 
@@ -318,7 +318,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 1. Select **Yes**.
 
-   ![Screenshot of adding a condition node.](../../../media/condition-node.png)
+   ![Screenshot of adding a condition node.](../../media/condition-node.png)
 
 1. Select **Save**.
 
@@ -352,7 +352,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 1. Under *# Skills* in the agent instructions, enter `Use the`, then type `/` and select the **Estimate Repair** topic, then enter `when a repair estimate is required.`
 
-   ![Screenshot of referencing the topic in the agent instructions.](../../../media/add-topic-to-instructions.png)
+   ![Screenshot of referencing the topic in the agent instructions.](../../media/add-topic-to-instructions.png)
 
 1. Select **Save**.
 
@@ -366,7 +366,7 @@ In this exercise, you will test topic routing and confirm the conversation follo
 
 1. In the **Test** pane, select the ellipses (**...**) next to the variables **{x}** icon, and toggle **Show activity map when testing** to **On** and **Track between topics** to **Off**.
 
-   ![Show activity map.](../../../media/show-activity-map.png)
+   ![Show activity map.](../../media/show-activity-map.png)
 
 1. At the top of the **Test pane**, select the **Start new test session** icon **+**.
 
@@ -376,7 +376,7 @@ In this exercise, you will test topic routing and confirm the conversation follo
 
 1. The conversation should begin by asking for the customer's name.
 
-   ![Screenshot of the Conversation.](../../../media/topic-conversation-1.png)
+   ![Screenshot of the Conversation.](../../media/topic-conversation-1.png)
 
 1. Provide a name.
 

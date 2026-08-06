@@ -67,7 +67,7 @@ In this exercise, you will create a new agent using natural language to analyze,
 
 1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **Cog** image.
 
-   ![Screenshot of the agent settings dialog.](../../../media/agent-settings-dialog.png)
+   ![Screenshot of the agent settings dialog.](../../media/agent-settings-dialog.png)
 
 1. Leave **English (United States)** set as the primary language for the agent.
 
@@ -97,7 +97,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. In Copilot Studio, select **Tools** in the left-hand navigation.
 
-   ![Screenshot of Tools registry page.](../../../media/copilot-studio-tools-registry.png)
+   ![Screenshot of Tools registry page.](../../media/copilot-studio-tools-registry.png)
 
 1. Select **+ New tool**.
 
@@ -105,7 +105,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. Verify that the **When an agent calls the flow** trigger and the **Respond to the agent** action have been added to the workflow.
 
-   ![Screenshot of a new workflow.](../../../media/workflow-new.png)
+   ![Screenshot of a new workflow.](../../media/workflow-new.png)
 
 1. Select the trigger step **When an agent calls the flow** and select **+ Add an input**.
 
@@ -113,7 +113,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. Enter `Task Summary` for *Input* and `Analyzed tasks` for *Please enter your input*.
 
-   ![Screenshot of trigger properties of the flow.](../../../media/workflow-trigger-step.png)
+   ![Screenshot of trigger properties of the flow.](../../media/workflow-trigger-step.png)
 
 1. Select **Save draft** near the upper-right of the page.
 
@@ -121,7 +121,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. In the **Details** section, select **Edit**.
 
-   ![Screenshot of details properties of the flow.](../../../media/workflow-details.png)
+   ![Screenshot of details properties of the flow.](../../media/workflow-details.png)
 
 1. In the **Details** pane, update **Flow name** to `Send Summary to Teams`.
 
@@ -137,7 +137,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. Enter `Teams` in the **Search** field and select **See more** for the **Microsoft Teams** connector.
 
-   ![Screenshot of searching for connector in the workflow.](../../../media/workflow-teams-connector.png)
+   ![Screenshot of searching for connector in the workflow.](../../media/workflow-teams-connector.png)
 
 1. Select the **Post message in a chat or channel** action.
 
@@ -160,7 +160,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. For *Message*, use **Dynamic Content** to select **Task Summary**.
 
-   ![Screenshot of Teams action in the workflow.](../../../media/workflow-teams-action.png)
+   ![Screenshot of Teams action in the workflow.](../../media/workflow-teams-action.png)
 
 ### Task 2.3 - Response action
 
@@ -172,7 +172,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. For *Enter a value to respond with*, use **Dynamic Content** and select the **Message link** from the Teams action.
 
-   ![Screenshot of the response action in the workflow.](../../../media/workflow-response-action.png)
+   ![Screenshot of the response action in the workflow.](../../media/workflow-response-action.png)
 
 1. Select **Save draft** near the upper-right of the page.
 
@@ -192,7 +192,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. In the **Add tool** dialog, select the **Workflows** filter.
 
-   ![Screenshot of adding a workflow as a tool.](../../../media/workflow-add-tool.png)
+   ![Screenshot of adding a workflow as a tool.](../../media/workflow-add-tool.png)
 
 1. Select the **Send Summary to Teams** workflow.
 
@@ -212,7 +212,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. In the **Completion** section, for **After running**, select **Write the response with generative AI**.
 
-   ![Screenshot of the configuration of workflow as a tool.](../../../media/workflow-tool-configuration.png)
+   ![Screenshot of the configuration of workflow as a tool.](../../media/workflow-tool-configuration.png)
 
 1. Select **Save**.
 
@@ -247,7 +247,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
       - Use the <Send Summary to Teams> tool when the task analysis is complete.
    ```
 
-   ![Screenshot of referencing the workflow tool in the agent instructions.](../../../media/workflow-add-tool-to-instructions.png)
+   ![Screenshot of referencing the workflow tool in the agent instructions.](../../media/workflow-add-tool-to-instructions.png)
 
 1. Select **Save**.
 
@@ -257,7 +257,7 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. In the **Test** pane, select the ellipses (**...**) next to the variables **{x}** icon, and toggle **Show activity map when testing** to **On** and **Track between topics** to **Off**.
 
-   ![Show activity map.](../../../media/show-activity-map.png)
+   ![Show activity map.](../../media/show-activity-map.png)
 
 1. At the top of the **Test** pane, select the **Start new test session** icon **+**.
 
@@ -267,13 +267,13 @@ In this exercise, you create a workflow that sends a message to Microsoft Teams.
 
 1. If prompted to connect to Microsoft Teams, select **Allow**.
 
-   ![Screenshot of the workflow tool used when testing the agent.](../../../media/workflow-test-agent-tool.png)
+   ![Screenshot of the workflow tool used when testing the agent.](../../media/workflow-test-agent-tool.png)
 
 1. In a new browser tab, navigate to `https://teams.cloud.microsoft/` and sign in if prompted.
 
 1. Navigate to the Team and channel you selected earlier in the workflow and verify the task analysis summary was posted to the Teams channel.
 
-   ![Screenshot of the message in Teams.](../../../media/workflow-test-agent-teams.png)
+   ![Screenshot of the message in Teams.](../../media/workflow-test-agent-teams.png)
 
 ## Exercise 3 - Create a workflow tool that analyzes an Excel file in a topic
 
@@ -286,7 +286,7 @@ In this exercise, you will use Copilot to create a topic from a description, cre
 
 1. In Copilot Studio, select the **App launcher** icon in the upper-left corner, then select **OneDrive**.
 
-   ![Screenshot of App Launcher.](../../../media/copilot-studio-app-launcher.png)
+   ![Screenshot of App Launcher.](../../media/copilot-studio-app-launcher.png)
 
 1. If prompted, skip any welcome messages.
 
@@ -294,11 +294,11 @@ In this exercise, you will use Copilot to create a topic from a description, cre
 
 1. Select **Excel workbook**.
 
-   ![Screenshot of creating a file in OneDrive.](../../../media/onedrive-create.png)
+   ![Screenshot of creating a file in OneDrive.](../../media/onedrive-create.png)
 
 1. In the upper-left of the **Excel workbook**, rename the file by selecting **Book** and entering `Operations tasks`.
 
-   ![Screenshot of renaming a file in OneDrive.](../../../media/onedrive-rename.png)
+   ![Screenshot of renaming a file in OneDrive.](../../media/onedrive-rename.png)
 
 1. Create the following columns in the first row:
 
@@ -345,13 +345,13 @@ In this exercise, you will use Copilot to create a topic from a description, cre
    - `Medium`
    - `Completed`
 
-   ![Screenshot of tasks in a file in OneDrive.](../../../media/onedrive-tasks.png)
+   ![Screenshot of tasks in a file in OneDrive.](../../media/onedrive-tasks.png)
 
 1. Select the rows and columns containing data (A1:F5), and in the toolbar select the **Insert** tab, and select **Table**, check the box **My table has headers**, then select **OK**.
 
 1. Select the **Table Design** tab and in the upper-left change the name of the table from *Table1* to **`Tasks`**.
 
-   ![Screenshot of tasks as a table in a file in OneDrive.](../../../media/onedrive-tasks-table.png)
+   ![Screenshot of tasks as a table in a file in OneDrive.](../../media/onedrive-tasks-table.png)
 
 1. Close the browser tab containing the Excel workbook.
 
@@ -407,7 +407,7 @@ In this exercise, you will use Copilot to create a topic from a description, cre
 
 1. For **Table** select **Tasks**.
 
-   ![Screenshot of Excel action in the workflow.](../../../media/onedrive-action.png)
+   ![Screenshot of Excel action in the workflow.](../../media/onedrive-action.png)
 
 1. Select **Show all**.
 
@@ -415,7 +415,7 @@ In this exercise, you will use Copilot to create a topic from a description, cre
 
 1. Move the cursor between the two single quotes and use **Dynamic content** to insert the **Priority** input parameter.
 
-   ![Screenshot of Excel filter in the workflow.](../../../media/onedrive-action-filter.png)
+   ![Screenshot of Excel filter in the workflow.](../../media/onedrive-action-filter.png)
 
 1. Select the **Respond to the agent** node in the authoring canvas and select **+ Add an output**.
 
@@ -449,13 +449,13 @@ In this exercise, you will use Copilot to create a topic from a description, cre
 
 1. Select **Create**.
 
-   ![Screenshot of topic with a question node.](../../../media/topic-question-node.png)
+   ![Screenshot of topic with a question node.](../../media/topic-question-node.png)
 
 1. Select the **Priority** variable in the bottom of the question node to open **Variables properties**.
 
 1. Under **Usage** select **Global (any topic can access)**.
 
-   ![Screenshot of global variable for a question node.](../../../media/variable-global.png)
+   ![Screenshot of global variable for a question node.](../../media/variable-global.png)
 
 1. Select **Save**.
 
@@ -486,7 +486,7 @@ In this exercise, you will use Copilot to create a topic from a description, cre
 
 1. In the **Inputs** section, for **Fill using** select **Custom value** and select the **Priority** global variable.
 
-   ![Screenshot of the inputs of workflow as a tool.](../../../media/workflow-tool-inputs.png)
+   ![Screenshot of the inputs of workflow as a tool.](../../media/workflow-tool-inputs.png)
 
 1. Select the ellipsis (**...**) next to the **Global.Priority** value, select **Formula** (**fx**), enter `Text(Global.Priority)`, and then select **Insert**. The **Priority** question stores a choice value, and the workflow requires text, so this formula converts the value and prevents a type mismatch error.
 
@@ -502,7 +502,7 @@ In this exercise, you will use Copilot to create a topic from a description, cre
 
 1. Under the **Question** node, select the **+** icon, select **Add a tool**, select the **Tool** tab, and then select the **Get Task List** tool.
 
-   ![Screenshot of adding a workflow as a tool to a topic.](../../../media/topic-add-tool.png)
+   ![Screenshot of adding a workflow as a tool to a topic.](../../media/topic-add-tool.png)
 
 1. Select **Save**.
 
@@ -541,13 +541,13 @@ In this exercise, you will use Copilot to create a topic from a description, cre
 
 1. The **test** pane should contain two tasks.
 
-   ![Screenshot of the workflow tool used when testing the agent.](../../../media/workflow-test-topic-tool.png)
+   ![Screenshot of the workflow tool used when testing the agent.](../../media/workflow-test-topic-tool.png)
 
 1. In a new browser tab, navigate to `https://teams.cloud.microsoft/` and sign in if prompted.
 
 1. Navigate to the Team and channel you selected earlier and review the two tasks posted to the channel.
 
-   ![Screenshot of the message in Teams.](../../../media/workflow-test-topic-teams.png)
+   ![Screenshot of the message in Teams.](../../media/workflow-test-topic-teams.png)
 
 ## Summary
 
