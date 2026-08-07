@@ -22,6 +22,7 @@ Before starting this exercise, ensure you have:
 
 - An active [Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account)
 - A web browser
+- Azure CLI
 - Basic familiarity with running commands in a terminal (you don't need to know Python already; the code is provided)
 
 > A Foundry project with the **gpt-5.4-mini** model already deployed has been set up for you. In the next section, you'll locate your project's **endpoint** and **deployment name** in the Azure AI Foundry portal.
@@ -33,10 +34,33 @@ Before starting this exercise, ensure you have:
 # Find your project endpoint and deployment name
 
 1. In a web browser, open the [Microsoft Foundry portal](https://ai.azure.com) at `https://ai.azure.com` and sign in with your Azure credentials. Close any tips or quick-start panes that appear the first time you sign in.
+
 1. On the home page, select your project. (If you have more than one, pick the one your trainer or lab environment set up for this exercise.)
-1. Open the **Overview** page for your project.
-1. In the **Endpoints and keys** section, make sure the Foundry library option is selected, and note the **Foundry project endpoint** shown there. This is the web address your app will use to reach your project and model. (You could also use the Azure OpenAI endpoint instead, if you prefer.)
-1. In the left-hand menu, select **Models and endpoints**. Confirm the name of your deployed model; it should read **gpt-5.4-mini**. Note this exact name too.
+
+    ![Screenshot of the Foundary Portal showing your project details.](../../media/home-page.png)
+
+    Selecting your project takes you straight to its home page.
+
+    ![Screenshot of the Foundry project home page, showing the API key, Project endpoint, and Azure OpenAI endpoint fields.](../../media/project-home-page-1.png)
+
+1. To confirm the name of your deployed model, use any of these:
+    - Under **Use a model**, select **View deployments**
+
+        ![Screenshot of the View deployments page, listing the deployed model name.](../../media/view-deployments.png)
+
+    - On the same home page scroll down, check the **Recent work** or **All** section
+
+        ![Screenshot of the Recent work / All section on the home page, showing the deployed model.](../../media/recent-work-all.png)
+
+    - In the top menu, select **Build**, then **Models**
+
+        ![Screenshot of the Build menu with Models selected, showing the deployed model name.](../../media/build-models.png)
+
+    It should read **gpt-5.4-mini**. Note this exact name too.
+1. On the project home page, find the **Project endpoint** field and copy the value shown there directly. This is the web address your app will use to reach your project and model. (The **Azure OpenAI endpoint** field, shown next to it, works too if you prefer to use that instead.)
+
+    ![Screenshot of the API key, Project endpoint, and Azure OpenAI endpoint fields, with the copy icon next to Project endpoint highlighted.](../../media/project-endpoint-copy.png)
+
 1. Copy both the endpoint and the deployment name into a local text file and save it somewhere safe. You'll paste these values into a configuration file in the next section, and you'll need them again in later exercises.
 
     > **Tip**: If you don't see a project or a gpt-5.4-mini deployment here, check with your trainer before continuing.
@@ -49,6 +73,8 @@ You'll write a small Python app that connects to your Foundry project and holds 
 
 1. Open a web browser and go to the [chat-app lab files on GitHub](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs).
 1. On the repo page, select the green **`<> Code`** button, then select **Download ZIP**.
+
+    ![Screenshot of the Code button.](../../media/code.png)
 1. Once the download finishes, find the ZIP file and extract it to a folder on your computer.
 1. Inside the extracted folder, open this path to find the chat app files:
 
@@ -63,8 +89,8 @@ You'll write a small Python app that connects to your Foundry project and holds 
 
     ```
     python -m venv labenv
-    ./labenv/bin/Activate.ps1
-    pip install -r requirements.txt azure-identity azure-ai-projects openai
+    .\labenv\Scripts\Activate.ps1
+    pip install -r requirements.txt
     ```
 
 1. Open the configuration file to edit it:
@@ -76,9 +102,7 @@ You'll write a small Python app that connects to your Foundry project and holds 
 1. In the file, replace `your_project_endpoint` with the endpoint you saved earlier, and `your_model_deployment` with the deployment name you saved too.
 1. Save with **Ctrl+S** (or right-click and choose Save), then close the editor while keeping your terminal open.
 
-### Write code to connect to your project and chat with your model
-
-> **Tip**: Watch your indentation as you add each block of code below; Python treats indentation as part of the code's structure, so a misaligned line will cause an error.
+### Write code to connect to your project and chat with your model (Note: We have the code updated in the mentioned files instructions but verify before you start the execution, so that there are no indentation issues)
 
 1. Open the app's code file:
 
@@ -90,7 +114,7 @@ You'll write a small Python app that connects to your Foundry project and holds 
 
     ```python
     # Add references
-    from azure.identity import DefaultAzureCredential
+    from azure.identity import AzureCliCredential
     from azure.ai.projects import AIProjectClient
     from openai import AzureOpenAI
     ```
@@ -101,7 +125,7 @@ You'll write a small Python app that connects to your Foundry project and holds 
     ```python
     # Initialize the project client
     project_client = AIProjectClient(
-        credential=DefaultAzureCredential(
+        credential=AzureCliCredential(
             exclude_environment_credential=True,
             exclude_managed_identity_credential=True
         ),
@@ -148,25 +172,44 @@ You'll write a small Python app that connects to your Foundry project and holds 
 
 # Sign into Azure and run the app
 
-1. In your terminal, sign in to Azure:
+1. Check whether you're already signed in:
+
+    ```
+    az account show
+    ```
+
+    If this shows your account details, skip to step 3. If it shows an error, or shows the wrong account, sign out first:
+
+    ```
+    az logout
+    ```
+
+1. Sign in to Azure:
 
     ```
     az login
     ```
 
-    You need to do this even if your terminal session already knows who you are; the app itself needs its own sign-in.
+    You need to do this even if your terminal session already knows who you are; the app itself needs its own sign-in. The first time you run this exercise, use this step directly. After that, always check with `az account show` first, and only run `az login` again if it's needed.
 
-    > If your account has access to subscriptions in more than one tenant, add the `--tenant` parameter. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+    Follow the prompts: open the sign-in link in a new tab, enter the code shown, and sign in using the account your trainer gave you. Back in the terminal, pick the subscription containing the Foundry project if you're asked to.
 
-1. Follow the prompts: open the sign-in link in a new tab, enter the code shown, and sign in with your Azure credentials. Back in the terminal, pick the subscription containing the Foundry project if you're asked to.
+    If you're asked to pick a subscription or tenant, type **1** and press Enter.
+
+    > If your account has access to subscriptions in more than one tenant, add the `--tenant` parameter instead. See [Sign into Azure interactively using the Azure CLI](https://learn.microsoft.com/cli/azure/authenticate-azure-cli-interactively) for details.
+
 1. Run the app:
 
     ```
     python chat-app.py
     ```
 
+    ![Screenshot of the terminal running chat-app.py, showing the app started and waiting for input.](../../media/response-00.png)
+
 1. When prompted, type a question, such as "What is the fastest animal on Earth?", and read the model's reply.
 1. Ask a follow-up, like "Where can I see one?" or "Are they endangered?" The model should answer using the earlier question as context, since your app is saving the conversation history.
+
+    ![Screenshot of the reponses](../../media/response-01.png)
 1. Type "quit" to exit the program.
 
     > If the app stops with a rate-limit error, wait a few seconds and try again. If there isn't enough quota left on the deployment, the model may not respond at all; check with your trainer if this happens.

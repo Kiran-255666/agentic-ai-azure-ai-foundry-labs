@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 # import namespaces
 from openai import OpenAI
-from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+from azure.identity import AzureCliCredential, get_bearer_token_provider
 
 
 def main():
@@ -19,7 +19,7 @@ def main():
 
         # Initialize the OpenAI client
         token_provider = get_bearer_token_provider(
-            DefaultAzureCredential(),
+            AzureCliCredential(),
             "https://ai.azure.com/.default"
         )
 

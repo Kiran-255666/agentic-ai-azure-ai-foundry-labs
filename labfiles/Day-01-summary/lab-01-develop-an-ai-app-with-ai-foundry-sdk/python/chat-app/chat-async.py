@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 # import namespaces for async
 import asyncio
 from openai import AsyncOpenAI
-from azure.identity.aio import DefaultAzureCredential, get_bearer_token_provider
+from azure.identity.aio import AzureCliCredential, get_bearer_token_provider
 
 
 async def main():
@@ -21,7 +21,8 @@ async def main():
         model_deployment = os.getenv("MODEL_DEPLOYMENT")
 
         # Initialize an async OpenAI client
-        credential = DefaultAzureCredential()
+        credential = AzureCliCredential()
+
 
         token_provider = get_bearer_token_provider(
             credential,
