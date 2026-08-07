@@ -1,0 +1,9 @@
+---
+lab:
+  title: Utilize prompt engineering in your app
+  description: Learn how different prompt structures shape a generative AI model's response, then build a Python app to test them.
+  level: 200
+  duration: 30
+  islab: true
+  status: 'released'
+---

@@ -18,6 +18,8 @@ This exercise takes approximately **20** minutes.
 
 Before starting this exercise, ensure you have:
 
+## Prerequisites
+
 - An active [Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account)
 - [Python 3.13](https://www.python.org/downloads/) or later installed
 - **Azure CLI** installed - [Install Azure CLI](https://aka.ms/installazurecliwindows)
