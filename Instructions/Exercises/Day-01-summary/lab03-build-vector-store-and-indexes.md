@@ -164,12 +164,14 @@ Read the notebook's theory section before moving on. Querying your own data mean
 
 The notebook builds this sequence:
 
+```mermaid
 flowchart LR
     A[Documents] --> B[Chunks]
     B --> C[Embeddings]
     C --> D[FAISS Index]
     D --> E[Query Embedding]
     E --> F[Matching Passages]
+```
 
 Retrieved passages make it possible to ground an answer in current source text and return citations to the chunks used.
 
