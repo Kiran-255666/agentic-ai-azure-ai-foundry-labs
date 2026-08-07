@@ -65,279 +65,267 @@ This exercise takes approximately **30** minutes.
 
     > **Tip**: If you don't see a project or a deployment here, check with your trainer before continuing.
 
-## Explore prompt engineering techniques
+# Explore prompt engineering techniques
 
 Start by testing a few prompt engineering techniques in the Chat playground to see how system instructions and examples influence the model's responses.
 
 1. Open a web browser and go to `https://oai.azure.com`.
-
 1. A pop-up may appear listing your available Azure OpenAI resources. If it appears, select the resource your trainer or lab environment set up for you. If no pop-up appears, continue to the next step.
 
-   This takes you to the Microsoft Foundry **Overview** page for that resource.
+    ![Screenshot of the pop-up listing Azure OpenAI resources, with an arrow pointing to the resource name to select.](../../media/pop-up.png)
+
+    This takes you to the Microsoft Foundry **Overview** page for that resource.
 
 1. In the left-hand panel, select **Playgrounds**.
 
+    ![Screenshot of the Playgrounds page, with an arrow pointing to the Chat playground card.](../../media/chat-playground.png)
+
 1. On the **Chat playground** card, select **Try the Chat playground**.
 
-   The Chat playground opens with two main areas:
+    The Chat playground opens with two main areas:
+    - **Setup**: where you select your model deployment and configure the assistant's behavior
+    - **Chat history**: where you submit prompts and view the model's responses
 
-   - **Setup**: Where you select your model deployment and configure the assistant's behavior.
-   - **Chat history**: Where you submit prompts and view the model's responses.
+    ![Screenshot of the Chat playground, showing the Setup pane with the deployment selected and the default instructions field, next to the Chat history pane.](../../media/chat-playground-01.png)
 
 1. In **Setup**, under **Deployment**, verify that your model deployment is selected.
-
 1. In the **Give the model instructions and context** field, verify that the following default system prompt is present:
 
-   ```text
-   You are an AI assistant that helps people find information.
-   ```
+    ```text
+    You are an AI assistant that helps people find information.
+    ```
+
+    ![Screenshot of the Chat playground showing the default system prompt entered in the Setup pane.](../../media/default-prompt-01.png)
 
 1. If the prompt isn't present, enter it manually.
-
-   ```text
-   You are an AI assistant that helps people find information.
-   ```
-
 1. If you modified the system prompt, select **Apply changes**. Otherwise, continue to the next step.
-
 1. In the message box under **Chat history**, submit the following prompt:
 
-   ```text
-   What kind of article is this?
-   ---
-   Severe drought likely in California
+    ```text
+    What kind of article is this?
+    ---
+    Severe drought likely in California
 
-   Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
 
-   In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
 
-   Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-   ```
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    ```
 
-   Notice that the model typically describes the article rather than returning a single category label.
+    Notice that the model typically describes the article rather than returning a single category label.
 
 1. In **Setup**, replace the system prompt with the following:
 
-   ```text
-   You are a news classification assistant. Categorize each news article using a single category label. Respond with only one of the following categories: News, Sports, Entertainment, Technology, Business, Health, Science, or Other.
-   ```
+    ```text
+    You are a news classification assistant. Categorize each news article using a single category label. Respond with only one of the following categories: News, Sports, Entertainment, Technology, Business, Health, Science, or Other.
+    ```
+
+    ![Screenshot of the Chat playground with the news classification system prompt entered in the Setup pane.](../../media/prompt-001.png)
 
 1. Select **Add section**, and then select **Examples**.
 
+    ![Screenshot of the Add section menu, with an arrow pointing to the Examples option.](../../media/examples.png)
+
 1. Add the following example:
 
-   **User:**
+    **User:**
 
-   ```text
-   What kind of article is this?
-   ---
-   New York Baseballers Wins Big Against Chicago
+    ```text
+    What kind of article is this?
+    ---
+    New York Baseballers Wins Big Against Chicago
 
-   New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
+    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
 
-   Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
+    Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
 
-   The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
-   ```
+    The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
+    ```
 
-   **Assistant:**
+    **Assistant:**
 
-   ```text
-   Sports
-   ```
+    ```text
+    Sports
+    ```
 
 1. Add a second example:
 
-   **User:**
+    **User:**
 
-   ```text
-   Categorize this article:
-   ---
-   Joyous moments at the Oscars
+    ```text
+    Categorize this article:
+    ---
+    Joyous moments at the Oscars
 
-   The Oscars this past week were quite something!
+    The Oscars this past week were quite something!
 
-   Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears. These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
+    Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears. These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
 
-   From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
-   ```
+    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
+    ```
 
-   **Assistant:**
+    **Assistant:**
 
-   ```text
-   Entertainment
-   ```
+    ```text
+    Entertainment
+    ```
 
 1. Select **Apply changes**.
-
 1. An **Update system message?** dialog appears, informing you that updating the system message will start a new chat session and previous messages won't be included in new API requests. Select **Continue**.
-
-1. In **Chat history**, notice that a new chat session has started. The message **The assistant setup has been updated. Previous messages won't be used as context for new queries.** is displayed.
-
+1. In **Chat history**, notice that a new chat session has started. The message "The assistant setup has been updated. Previous messages won't be used as context for new queries." is displayed.
 1. In **Chat history**, resubmit the same drought article prompt from earlier.
 
-   The updated system instructions and examples guide the model to respond with a consistent category label, such as:
+    The updated system instructions and examples guide the model to respond with a consistent category label, such as:
 
-   ```text
-   News
-   ```
+    ```text
+    News
+    ```
 
-   Depending on the model version, the exact wording may vary, but the response should follow the classification format defined by the system prompt and examples.
+    Depending on the model version, the exact wording may vary, but the response should follow the classification format defined by the system prompt and examples.
+
+    ![Screenshot of the Chat history showing the drought article prompt and the model's single-word category response.](../../media/response.png)
 
 1. In **Setup**, restore the default system prompt:
 
-   ```text
-   You are an AI assistant that helps people find information.
-   ```
+    ```text
+    You are an AI assistant that helps people find information.
+    ```
 
-   Remove the examples, and then select **Apply changes**.
+    Remove the examples, and then select **Apply changes**.
 
 1. If prompted with the **Update system message?** dialog, select **Continue**.
-
 1. In **Chat history**, submit the following prompt:
 
-   ```text
-   # 1. Create a list of animals
-   # 2. Create a list of whimsical names for those animals
-   # 3. Combine them randomly into a list of 25 animal and name pairs
-   ```
+    ```text
+    # 1. Create a list of animals
+    # 2. Create a list of whimsical names for those animals
+    # 3. Combine them randomly into a list of 25 animal and name pairs
+    ```
 
-   The model will likely interpret this as a request for a list of steps or plain-language output rather than executable code.
+    The model will likely interpret this as a request for a list of steps or plain-language output rather than executable code.
 
 1. In **Setup**, change the system prompt to:
 
-   ```text
-   You are a coding assistant helping write Python code.
-   ```
+    ```text
+    You are a coding assistant helping write Python code.
+    ```
 
 1. Select **Apply changes**.
-
 1. If prompted with the **Update system message?** dialog, select **Continue**.
-
 1. Resubmit the same prompt from the previous step.
 
-   This time, the model generates Python code that performs the requested tasks, demonstrating how changing the system prompt influences the style and format of the model's responses.
+    This time, the model generates Python code that performs the requested tasks, demonstrating how changing the system prompt influences the style and format of the model's responses.
 
-Yep man. Since this is a lab, I'd add the virtual environment **after opening the `python` folder and before installing the requirements**.
-
-Use this cleaned-up section:
-
-````md
 # Get the application files from GitHub
 
 1. Open a web browser and go to the [lab files on GitHub](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs).
-
 1. On the repository page, select the green **`<> Code`** button, and then select **Download ZIP**.
 
-1. Once the download finishes, locate the ZIP file and extract it to a folder on your computer.
+    ![Screenshot of the Code button.](../../media/code.png)
 
+1. Once the download finishes, locate the ZIP file and extract it to a folder on your computer.
 1. In the extracted folder, navigate to:
 
-   `labfiles\Day-01-summary\lab-02-bring-your-own-data-to-open-ai\python\`
+    ```
+    labfiles\Day-01-summary\lab-02-bring-your-own-data-to-open-ai\python\
+    ```
 
-1. Open the `python` folder. It contains the application files for this exercise, including `prompt_engineering.py`, `.env`, `system.txt`, `grounding.txt`, and `requirements.txt`.
+    This folder already contains everything you need for this exercise: `.env`, `grounding.txt`, `prompt_engineering.py`, `requirements.txt`, and `system.txt`.
 
-   > **Tip**: If you're not sure which folder contains the exercise files, check with your trainer.
+    > **Tip**: If you're not sure which folder contains the exercise files, check with your trainer.
 
-1. In **File Explorer**, select the **address bar** at the top of the window, type the following command, and press **Enter**:
+1. In **File Explorer**, select the address bar at the top of the window, type the following command, and press **Enter**:
 
-   ```text
-   code .
-````
+    ```
+    code .
+    ```
 
-This opens the `python` folder directly in Visual Studio Code.
+    This opens the folder directly in Visual Studio Code.
 
-> **Tip**: If `code .` doesn't work, open the `python` folder manually in Visual Studio Code.
+    > **Tip**: If `code .` doesn't work, open the folder manually in Visual Studio Code.
 
 ## Configure your application
 
-1. In Visual Studio Code, open the `.env` file.
+1. In Visual Studio Code, open the `.env` file. It already contains placeholder values:
 
-2. The `.env` file is already provided with temporary placeholder values. Replace each placeholder with the actual Azure OpenAI value you copied or saved earlier:
+    ```env
+    AZURE_OPENAI_ENDPOINT=https://your_azure_openai_endpoint/openai/v1/
+    AZURE_OPENAI_API_KEY=your_azure_openai_api_key
+    AZURE_OPENAI_DEPLOYMENT=your_azure_openai_deployment
+    ```
 
-   ```env
-   AZURE_OPENAI_ENDPOINT=https://your_azure_openai_endpoint/openai/v1/
-   AZURE_OPENAI_API_KEY=your_azure_openai_api_key
-   AZURE_OPENAI_DEPLOYMENT=your_azure_openai_deployment
-   ```
+1. Replace each placeholder with the actual Azure OpenAI value you copied or saved earlier.
 
-   Replace each `your_...` placeholder with the corresponding value from your Azure OpenAI resource.
+    > **Important**: Keep your Azure OpenAI API key private. Never share it or commit the `.env` file to a public repository.
 
-   > **Important**: Keep your Azure OpenAI API key private. Never share it or commit the `.env` file to a public repository.
+1. Open `prompt_engineering.py` and review the code.
 
-3. Open `prompt_engineering.py` and review the code.
+    The application is already configured to read the Azure OpenAI settings from the `.env` file, so you don't need to enter the endpoint, API key, or deployment directly in the Python code.
 
-   The application is already configured to read the Azure OpenAI settings from the `.env` file, so you don't need to enter the endpoint, API key, or deployment directly in the Python code.
-
-4. Review `system.txt` and `grounding.txt`. These files are already provided and contain the system instructions and grounding information used by the application.
-
-5. Check `prompt_engineering.py` for any indentation issues before running it. Python uses indentation to define blocks of code, so an incorrectly indented line can cause an error when you execute the script.
-
-6. Save your changes.
+1. Review `system.txt` and `grounding.txt`. These files are already provided and contain the system instructions and grounding information used by the application.
+1. Check `prompt_engineering.py` for any indentation issues before running it. Python uses indentation to define blocks of code, so an incorrectly indented line can cause an error when you execute the script.
+1. Save your changes.
 
 ## Create a Python virtual environment
 
-1. In the Visual Studio Code terminal, make sure you're in the `python` folder.
+1. In the Visual Studio Code terminal, make sure you're in the exercise's `python` folder.
+1. Create a virtual environment named `.venv`:
 
-2. Create a virtual environment named `.venv`:
+    ```powershell
+    python -m venv .venv
+    ```
 
-   ```powershell
-   python -m venv .venv
-   ```
+1. Activate the virtual environment:
 
-3. Activate the virtual environment:
+    ```powershell
+    .venv\Scripts\Activate.ps1
+    ```
 
-   ```powershell
-   .venv\Scripts\Activate.ps1
-   ```
+    After activation, you should see `(.venv)` at the beginning of the terminal prompt.
 
-   After activation, you should see `(.venv)` at the beginning of the terminal prompt.
+    > **Tip**: If PowerShell prevents the activation script from running, open a Command Prompt terminal and use:
+    >
+    > ```cmd
+    > .venv\Scripts\activate.bat
+    > ```
 
-   > **Tip**: If PowerShell prevents the activation script from running, open a Command Prompt terminal and use:
-   >
-   > ```cmd
-   > .venv\Scripts\activate.bat
-   > ```
+1. Install the required packages:
 
-4. Install the required packages:
-
-   ```powershell
-   pip install -r requirements.txt
-   ```
+    ```powershell
+    pip install -r requirements.txt
+    ```
 
 ## Run your application
 
 The `system.txt` file contains the system message that the application sends to the model. You'll edit and save this file between iterations. The application pauses each time so you can update the system message before sending the next request.
 
-1. Make sure the virtual environment is activated and that you're in the `python` folder.
+1. Make sure the virtual environment is activated and that you're in the exercise's `python` folder.
+1. Run the application:
 
-2. Run the application:
+    ```powershell
+    python prompt_engineering.py
+    ```
 
-   ```powershell
-   python prompt_engineering.py
-   ```
+1. When the application pauses and asks you to continue, open `system.txt` in Visual Studio Code.
+1. Replace the contents of `system.txt` with the following system message, and save the file:
 
-3. When the application pauses and asks you to continue, open `system.txt` in Visual Studio Code.
+    ```text
+    You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
+    ```
 
-4. Replace the contents of `system.txt` with the following system message, and save the file:
+1. Return to the terminal and press **Enter** when prompted to continue.
+1. When prompted for the user message, enter:
 
-   ```text
-   You're an AI assistant who helps people find information. You'll provide answers from the text provided in the prompt, and respond concisely.
-   ```
+    ```text
+    What animal is the favorite of children at Contoso?
+    ```
 
-5. Return to the terminal and press **Enter** when prompted to continue.
+1. Review the model's response.
 
-6. When prompted for the user message, enter:
+    ![Screenshot of the terminal in Visual Studio Code, showing the .env file with placeholder values and the app's output after asking about Contoso's favorite animal.](../../media/result-01-02.png)
 
-   ```text
-   What animal is the favorite of children at Contoso?
-   ```
-
-7. Review the model's response.
-
-    ![Screenshot of the model's response](../../media/result-01-02.png)
-
-8. Continue with the remaining iterations in the exercise by editing and saving `system.txt`, then entering the specified user message when prompted.
+1. Continue with the remaining iterations in the exercise by editing and saving `system.txt`, then entering the specified user message when prompted.
 
 ## Summary
 
