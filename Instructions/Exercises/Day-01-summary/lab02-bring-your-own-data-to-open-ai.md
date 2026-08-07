@@ -219,6 +219,7 @@ Start by testing a few prompt engineering techniques in the Chat playground to s
 
 # Get the application files from GitHub
 
+1. If you already downloaded and extracted this repository's ZIP file in a previous exercise, skip ahead to the next step, and navigate directly to the folder path below. Otherwise, follow the steps below to download it first.
 1. Open a web browser and go to the [lab files on GitHub](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs).
 1. On the repository page, select the green **`<> Code`** button, and then select **Download ZIP**.
 
