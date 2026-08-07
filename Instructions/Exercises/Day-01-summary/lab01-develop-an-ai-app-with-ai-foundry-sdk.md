@@ -16,13 +16,13 @@ This exercise takes approximately **20** minutes.
 
 > **Note**: Some of the technologies used in this exercise are in preview or in active development. You may see unexpected behavior, warnings, or errors.
 
-## Prerequisites
-
 Before starting this exercise, ensure you have:
 
 - An active [Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account)
+- [Python 3.13](https://www.python.org/downloads/) or later installed
+- **Azure CLI** installed - [Install Azure CLI](https://aka.ms/installazurecliwindows)
+- [Visual Studio Code](https://code.visualstudio.com/) installed on your local machine
 - A web browser
-- Azure CLI
 - Basic familiarity with running commands in a terminal (you don't need to know Python already; the code is provided)
 
 > A Foundry project with the **gpt-5.4-mini** model already deployed has been set up for you. In the next section, you'll locate your project's **endpoint** and **deployment name** in the Azure AI Foundry portal.
