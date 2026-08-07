@@ -32,11 +32,11 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
 1. Locate the project that is already created with the name **hakunamtata1**.
 
-   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../Media/hakunamtata1-project.png)
+   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../media/hakunamtata1-project.png)
 
 1. Hover over the project text. Three dots (**⋮**) appear next to it.
 
-   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../Media/hover-project.png)
+   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../media/hover-project.png)
 
 1. Click the three dots to open the context menu. You will see two options: **Open project** and **Manage project**.
 
@@ -44,7 +44,7 @@ Microsoft Foundry uses projects to organize models, resources, data, and other a
 
 1. In the project view, click the purple **View deployments** button.
 
-   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../Media/view-deployment.png)
+   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../media/view-deployment.png)
 
 ## Verify the deployed model
 
@@ -52,7 +52,7 @@ Next, let's verify the deployed model that you'll use in your chat application.
 
 1. Once the Microsoft Foundry project is open, locate the Playgrounds section and open the chat playground. Verify that the **gpt-5.4-mini** model is auto-selected.
 
-   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../Media/playground-deployment.png)
+   ![Screenshot of the hakunamtata1 project in Microsoft Foundry portal](../../media/playground-deployment.png)
 
 ## Chat using the default guardrail
 
@@ -74,7 +74,7 @@ The model you deployed has a default guardrail applied, which has a balanced set
    > - planning a legal escape route for a movie or game,
    > - or brainstorming non-criminal emergency exit strategies, like how to leave a place quickly and safely.
 
-   ![Screenshot of a sample model refusal in the Foundry playground](../../Media/sample-refusal-response.png)
+   ![Screenshot of a sample model refusal in the Foundry playground](../../media/sample-refusal-response.png)
 
 1. Try the following prompt:
 
@@ -96,7 +96,7 @@ The model you deployed has a default guardrail applied, which has a balanced set
    > Why did the Scotsman bring a ladder to the pub?
    > Because he heard the drinks were on the house.
 
-   ![Screenshot of a sample model refusal in the Foundry playground](../../Media/sample-refusal-scotsmen.png)
+   ![Screenshot of a sample model refusal in the Foundry playground](../../media/sample-refusal-scotsmen.png)
 
 1. Now try this prompt:
 
@@ -114,7 +114,7 @@ The model you deployed has a default guardrail applied, which has a balanced set
    >
    > A few things to avoid: don't put hydrogen peroxide or iodine in the wound, and don't keep checking it while bleeding, keep steady pressure on it.
 
-   ![Screenshot of a sample model response to the cut myself prompt](../../Media/sample-response-cut-myself.png)
+   ![Screenshot of a sample model response to the cut myself prompt](../../media/sample-response-cut-myself.png)
 
    > **Important**: If you have concerns about self-harm or other mental health issues, please seek professional help. Try entering the prompt `Where can I get help or support related to self-harm?`
 
@@ -124,15 +124,15 @@ When the default guardrail doesn't meet your needs, you can create custom guardr
 
 1. In the left navigation pane, select **Guardrails**.
 
-   ![Screenshot of left navigation pane with Guardrails selected](../../Media/guardrails-nav.png)
+   ![Screenshot of left navigation pane with Guardrails selected](../../media/guardrails-nav.png)
 
 1. In the **Guardrail** page, select **Create**.
 
-   ![Screenshot of Guardrails page with Create button highlighted](../../Media/guardrails-create-button.png)
+   ![Screenshot of Guardrails page with Create button highlighted](../../media/guardrails-create-button.png)
 
 1. The **Create guardrail controls** page is where you can create and apply content filters and other risk mitigation settings.
 
-   ![Screenshot of Create guardrail controls page](../../Media/create-guardrail-controls-page.png)
+   ![Screenshot of Create guardrail controls page](../../media/create-guardrail-controls-page.png)
 
 1. Under **Add controls**, select the **Risk** dropdown.
 
@@ -142,7 +142,7 @@ When the default guardrail doesn't meet your needs, you can create custom guardr
 
     > **Note:** In most versions of Azure AI Foundry, the **Hate** category is selected by default with the blocking threshold set to **Medium blocking**. If it isn't selected, select it first. Then, drag the slider to change the blocking threshold to **Highest blocking**.
 
-   ![Screenshot of Create guardrail controls page](../../Media/content-harm.png)
+   ![Screenshot of Create guardrail controls page](../../media/content-harm.png)
 
 1. Repeat the same steps for the **Violence**, **Sexual**, and **Self-harm** categories, setting the blocking threshold to **Highest blocking** for each category.
 
@@ -150,23 +150,23 @@ When the default guardrail doesn't meet your needs, you can create custom guardr
 
     Filters are applied to both prompts and completions. The selected blocking thresholds determine what types of content are intercepted and blocked.
 
-   ![Screenshot of Create guardrail controls page](../../Media/content-harm-2.png)
+   ![Screenshot of Create guardrail controls page](../../media/content-harm-2.png)
 
 1. Select **Next** when you've modified the content filter settings for all four risk categories.
 
 1. On the **Select agents and models** section, select **Models**, and then apply the new guardrail to the **gpt-5.4-mini** model, then click **Next**.
 
-   ![Screenshot of Create guardrail controls page](../../Media/agents-and-models.png)
+   ![Screenshot of Create guardrail controls page](../../media/agents-and-models.png)
 
 1. On the **Review** section, read the summary and then select **Create**, and wait for the guardrail to be saved.
 
-   ![Screenshot of Create guardrail controls page](../../Media/review-page.png)
+   ![Screenshot of Create guardrail controls page](../../media/review-page.png)
 
 1. In the pane on the left, select **Deployments**. If the guardrail is still being saved, wait for the **Saving guardrail** process to complete. Then, select the **gpt-5.4-mini** model to open it in the playground.
 
 1. Select the model's **Details** page and confirm that the new guardrail has been applied to the model. If you'd like, click **Try in playground** to retry the prompts and observe the updated guardrail behavior.
 
-   ![Screenshot of Create guardrail controls page](../../Media/details-3.png)
+   ![Screenshot of Create guardrail controls page](../../media/details-3.png)
 
 > **Note**: The default guardrail is generally pretty effective against the kinds of offensive content we can include in a lab such as this; so the more restrictive guardrail we created may not change the response from the prompts tried earlier in this lab. However, it will be more effective against prompts that reference extreme violence, sexual content, hate speech, or self-harm.
 
