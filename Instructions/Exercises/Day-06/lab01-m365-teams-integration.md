@@ -10,6 +10,8 @@ lab:
 
 # Deploy agents to Microsoft Teams 
 
+**Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it**
+
 In this lab, you'll create and publish your own AI agent to **Microsoft Teams**. You'll use the existing Foundry project and deployed model available for the training, configure an enterprise knowledge agent with grounding documents, and publish it so employees can access it where they work.
 
 This lab focuses on **agent creation, deployment, and publishing workflows**. You won't create a new Foundry project or deploy a model; however, you will create, configure, test, and publish your own agent in the existing project.
