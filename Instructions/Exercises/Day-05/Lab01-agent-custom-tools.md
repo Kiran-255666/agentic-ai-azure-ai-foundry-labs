@@ -614,8 +614,10 @@ if input_list:
 print(f"AGENT: {response.output_text}")
 ```
 
+````markdown
 This creates the following flow:
 
+```mermaid
 flowchart LR
     A[User Prompt] --> B[AI Agent]
     B --> C[Function Call]
@@ -623,8 +625,10 @@ flowchart LR
     D --> E[Function Result]
     E --> F[AI Agent Processes Result]
     F --> G[Final Response]
+````
 
 > **Important**: All of this functionality has already been implemented in `agent.py`. Review the code and understand how the function-call cycle works before running the application.
+
 
 ## Run the agent application
 
