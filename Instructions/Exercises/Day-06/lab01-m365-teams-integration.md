@@ -280,7 +280,7 @@ Hello! What can you help me with?
 
 ```
     
-    ![Screenshot of the Code button.](../../media/app-2.png)
+![Screenshot of the Code button.](../../media/app-2.png)
 
 3. Test a knowledge question:
 
