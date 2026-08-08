@@ -171,6 +171,8 @@ By default, the Foundry IQ knowledge tool runs without asking for approval. To l
 
     > **Note**: The portal may add a **Web search** tool to new agents by default. Use the three dots on the **Azure AI Search** tool associated with your knowledge base, not another tool.
 
+![Screenshot of the Foundry Toolkit for VS Code extension in the Extensions Marketplace.](../../media/zzz.png)
+
 1. In **Require approval before using tools**, select **Ask for approval for all tools**. Save your changes if prompted.
 
 Your agent now requests approval whenever it uses Foundry IQ. The Python client you complete next will prompt you to approve or deny each request.
