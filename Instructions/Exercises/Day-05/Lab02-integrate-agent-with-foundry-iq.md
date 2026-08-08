@@ -9,6 +9,7 @@ lab:
 ---
 
 # Integrate an AI agent with Foundry IQ
+**Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it**
 
 In this exercise, you'll configure an AI agent that uses Foundry IQ to search and retrieve information from a knowledge base. You'll use your existing Foundry project and deployed models, create a search resource and knowledge base with sample data, configure an agent, and then connect to it from Visual Studio Code.
 
