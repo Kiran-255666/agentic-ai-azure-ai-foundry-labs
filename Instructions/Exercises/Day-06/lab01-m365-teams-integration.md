@@ -252,89 +252,49 @@ When you publish an agent to Teams, Foundry prepares the Teams app package and c
 
 10. Review the publishing information, then select **Next: Publish options**.
 
-### Choose a publishing option
+### Publish the agent to Teams
 
-After selecting **Next: Publish options**, the **Publish options** page displays two options: **Direct publish** and **Download & customize**.
+After selecting **Next: Publish options**, the **Publish options** page opens.
 
-#### Direct publish
+1. Under **Direct publish**, select **Just you**.
 
-The **Direct publish** option publishes the agent directly from Foundry.
+   > **Note**: **Just you** makes the agent available immediately for your personal use.
 
-1. Select the **Direct publish** tab.
+2. Select **Publish**.
 
-2. Under **Choose who can use this agent**, select one of the following options:
+3. Wait for the publishing process to complete successfully.
 
-   - **Just you**: Makes the agent available immediately for your personal use.
-   - **People in your organization**: Requires administrator approval. Your Microsoft 365 administrator reviews the request and assigns access.
-
-3. For this lab, select **Just you**.
-
-4. Select **Publish**.
-
-5. Wait for the publishing process to complete successfully.
-
-> **Note**: If you select **People in your organization**, your Microsoft 365 administrator must review and approve the publishing request before users can access the agent.
-
-#### Download & customize
-
-The **Download & customize** option lets you download the agent manifest, customize the package if needed, and upload it through the Teams admin center.
-
-1. Select the **Download & customize** tab.
-
-2. Review the publishing instructions.
-
-3. If required, customize the downloaded package.
-
-4. Go to the **Teams admin center** and open **Manage apps**.
-
-5. Upload the ZIP package.
-
-6. Configure the required permissions for your organization.
-
-7. Select **Download ZIP** to download the agent package.
-
-> **Note**: Use **Download & customize** when you need to customize the agent manifest or manage the app through the Teams admin center. Otherwise, use **Direct publish** for the simpler publishing workflow.
-
-### Deploy to Teams
-
-After the agent package is prepared, you can publish it to Teams.
-
-1. When the package is ready, select **Continue the in-product publishing flow**.
-1. Choose a publishing scope:
-
-    - **Individual scope**: The agent appears under **Your agents** in Teams. This is best for personal testing and doesn't require admin approval.
-    - **Organization (tenant) scope**: The agent appears under **Built by your org** for all users and requires admin approval.
-
-1. For this lab, select **Individual scope**.
-1. Select **Submit**.
-1. Wait for the publishing success message.
-
-> **Alternative if direct publishing fails**: If the publishing dialog returns a **400** error and your Microsoft 365 account can publish custom apps, select the **Download & customize** tab and follow its instructions.
-
-1. In Microsoft Teams, find your agent under **Apps** > **Your agents**.
+4. In Microsoft Teams, go to **Apps** and find **Enterprise Knowledge Agent** under **Your agents**.
 
 ### Test your agent in Teams
 
-1. Open the agent chat in Teams, or select it from **Apps** > **Your agents**.
-1. Send a greeting:
+1. Open the agent in Teams.
 
-    ```
-    Hello! What can you help me with?
-    ```
+2. Send a greeting:
 
-1. Test a knowledge question:
+```
 
-    ```
-    What are the laptop password requirements?
-    ```
+Hello! What can you help me with?
 
-1. Ask another question:
+```
 
-    ```
-    What MFA methods are supported?
-    ```
+3. Test a knowledge question:
 
-1. Verify that the agent responds using the IT security policy document.
+```
+
+What are the laptop password requirements?
+
+```
+
+4. Ask another question:
+
+```
+
+What MFA methods are supported?
+
+```
+
+5. Verify that the agent responds using the IT security policy document.
 
 **Congratulations!** Your agent is now available in Microsoft Teams.
 
@@ -346,17 +306,11 @@ After the agent package is prepared, you can publish it to Teams.
 - Wait one to two minutes for the agent to appear.
 - Confirm that publishing completed successfully in the Foundry portal.
 
-**Can't upload the app manually:**
-
-- Re-download the package if the `manifest.zip` file may be corrupted.
-- Check whether custom app uploads are disabled by your Teams administrator.
-- Verify that the icons are 192x192 and 32x32 pixels.
-
 **Agent doesn't respond:**
 
-- Wait 30 seconds after installation for the bot to initialize.
 - Test the agent in the Foundry playground first.
 - Verify that the policy files were uploaded and grounding is enabled.
+- Wait a short time after publishing for the agent to become available.
 
 **Responses are generic:**
 
@@ -364,25 +318,23 @@ After the agent package is prepared, you can publish it to Teams.
 - Test the same knowledge query in the Foundry playground.
 - Confirm that the uploaded files finished processing.
 
-
-
 ## Cleanup
 
-To avoid unnecessary charges or leave unused published agents, delete the agent and remove the installed app when you're finished.
+To avoid leaving an unused published agent, delete the agent and remove the installed app when you're finished.
 
 ### Delete the agent
 
 1. In the Foundry portal, go to **Build** > **Agents**.
-1. Find **enterprise-knowledge-agent**.
-1. Select the **...** menu, then select **Delete**.
-1. Confirm deletion.
+2. Find **enterprise-knowledge-agent**.
+3. Select the **...** menu, then select **Delete**.
+4. Confirm deletion.
 
 Deleting the agent also removes associated publishing configurations.
 
 ### Uninstall from Teams
 
 1. Open Microsoft Teams.
-1. Go to **Apps** > **Manage your apps**.
-1. Find **Enterprise Knowledge Agent**.
-1. Select **...** > **Uninstall**.
-1. Confirm the uninstallation.
+2. Go to **Apps** > **Manage your apps**.
+3. Find **Enterprise Knowledge Agent**.
+4. Select **...** > **Uninstall**.
+5. Confirm the uninstallation.
