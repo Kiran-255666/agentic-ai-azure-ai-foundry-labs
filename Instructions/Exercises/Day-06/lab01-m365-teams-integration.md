@@ -50,11 +50,25 @@ This lab uses the Foundry project and deployed model already provided for the tr
 
 Now create an enterprise knowledge agent that you'll configure and publish to Teams and Copilot.
 
-1. On the project home page, select **Build**. On the **Agents** tab, select **Create agent**.
-1. Set the **Agent name** to `enterprise-knowledge-agent`.
-1. Select the existing deployed chat model if prompted, then create the agent.
+1. On the Foundry project home page, select **Start building** in the **Build an agent** card.
 
-    The playground opens for your new agent. The deployed model is already available in the project, so you can now focus on configuring the agent's behavior and knowledge grounding.
+    ![Screenshot of the Build an agent card and Start building button.](../../media/sb-1-3.jpg)
+
+1. In the **Create an agent** dialog, enter the following agent name:
+
+    ```
+    enterprise-knowledge-agent
+    ```
+
+1. Select **Create**.
+
+    ![Screenshot of the Create an agent dialog with the agent name entered.](../../media/pp-1-2.jpg)
+
+1. After the agent is created, the agent playground opens. Verify that the existing deployed chat model is selected at the top of the configuration pane.
+
+    ![Screenshot of the enterprise-knowledge-agent playground with the deployed model selected.](../../media/pg-1.jpg)
+
+    The deployed model is already available in the project, so you can now focus on configuring the agent's behavior and knowledge grounding.
 
 ## Get the application files
 
@@ -79,13 +93,7 @@ The sample policy documents for this lab are included in the training repository
 
     > **Tip**: If you're not sure which folder contains the exercise files, check with your trainer.
 
-1. In **File Explorer**, select the address bar, type the following command, and press **Enter**:
-
-    ```
-    code .
-    ```
-
-    This opens the folder directly in Visual Studio Code.
+1. In **File Explorer**, select the address bar, type `code.` , and press **Enter**. This opens the folder directly in Visual Studio Code.
 
     > **Tip**: If `code .` doesn't work, open the folder manually in Visual Studio Code.
 
@@ -107,19 +115,29 @@ Now configure your agent to answer questions about Contoso company policies. You
     Always cite your sources when referencing specific policies.
     ```
 
-1. Select **Save** to save the agent configuration.
-1. In the folder you opened in Visual Studio Code, locate these sample documents:
+    ![Screenshot of the Code button.](../../media/i.png)
 
-    ```
-    sample_documents\it_security_policy.txt
-    sample_documents\remote_work_policy.txt
-    ```
+1. Select **Save** to save the agent configuration.
+
+    ![Screenshot of the Code button.](../../media/s.png)
+
+1. In the folder you opened in Visual Studio Code, locate the following sample documents:
+
+   ```
+   sample_documents\it_security_policy.txt
+   sample_documents\remote_work_policy.txt
+   ```
 
 1. Return to your agent configuration in the Foundry portal and scroll to the **Tools** section.
-1. Select **Upload files**.
-1. In the file attachment dialog, browse to the `sample_documents` folder and select both policy files.
-1. Select **Attach**.
-1. Select **Save** if prompted.
+1. Select **Upload files**. In the **Attach files** dialog, you can either drag and drop the files or select **browse for files**.
+1. Browse to the `sample_documents` folder and select the following policy files:
+   ```text
+   it_security_policy.txt
+   remote_work_policy.txt
+   ```
+   Once the files are selected, you should see status being changed to **“Success”** for both files.
+1. Select **Attach** to upload the files.
+1. Select the **Save** button in the top-right corner.
 
 Your agent now has grounding data and can use the attached documents to answer company-policy questions.
 
@@ -132,8 +150,11 @@ Test the agent before publishing it. This confirms that the instructions and gro
     ```
     What are the password requirements for my laptop?
     ```
+    
+    ![Screenshot of the Code button.](../../media/v1.png)
 
 1. Verify that the agent returns information from the IT security policy, such as a minimum 12-character password with uppercase, lowercase, numbers, and special characters.
+
 1. Ask the following question:
 
     ```
@@ -141,6 +162,9 @@ Test the agent before publishing it. This confirms that the instructions and gro
     ```
 
 1. Verify that the response uses the remote work policy and identifies the core hours as 9 AM to 3 PM.
+    
+    ![Screenshot of the Code button.](../../media/v2.png)
+
 1. Ask one more question:
 
     ```
@@ -148,7 +172,10 @@ Test the agent before publishing it. This confirms that the instructions and gro
     ```
 
 1. Verify that the agent retrieves the BitLocker requirement from the IT security policy.
-1. Select **Save**.
+    
+    ![Screenshot of the Code button.](../../media/v3.png)
+
+1. Select **Save** if you haven't already done so. If the changes are already saved, skip this step and proceed to the next step.
 
 Your agent is now ready to publish. Next, prepare the Teams app information and icons required by the publishing flow.
 
@@ -156,54 +183,76 @@ Your agent is now ready to publish. Next, prepare the Teams app information and 
 
 When you publish an agent to Teams, Foundry prepares the Teams app package and configuration needed to make the agent available in Teams.
 
-### Prepare app information
+### Prepare publishing information
 
-Use the following values when you configure the Teams app:
-
-| Field | Value |
-|---|---|
-| **App Name** | Enterprise Knowledge Agent |
-| **Short Description** | AI assistant for company policies |
-| **Full Description** | Enterprise AI assistant that answers questions about company policies, IT procedures, and employee resources |
-| **Developer Name** | Your name or company name |
-| **Website URL** | <https://contoso.com> |
-| **Privacy Policy URL** | <https://contoso.com/privacy> |
-| **Terms of Use URL** | <https://contoso.com/terms> |
-
-### Create app icons
-
-Create or obtain the following PNG icons for your Teams app:
-
-1. A **color icon**, 192x192 pixels, containing a full-color version of your app logo.
-1. An **outline icon**, 32x32 pixels, containing a white outline on a transparent background for the Teams sidebar.
-
-> **Quick option for this lab**: Create simple icons with initials or a colored square in PowerPoint, Paint, or Canva.
+> **Note**: The current Foundry publishing flow collects the agent name, description, developer information, and other publishing details directly on the **Publish to Teams and Microsoft 365** page. You don't need to create a separate Teams app configuration or prepare app icons manually.
 
 ### Publish from the portal
 
-1. In the Foundry portal, open your agent: **Build** > **Agents** > **enterprise-knowledge-agent**.
 1. Select **Publish** at the top of the page.
+    
+    ![Screenshot of the Code button.](../../media/publish.png)
+
 1. Select **Publish to Teams and Microsoft 365 Copilot**.
-1. Select **Continue**.
 
-### Configure Teams app details
+### Configure publishing details
 
-1. Enter the following **Basic information**:
+1. Under **Agent**, verify that the agent name is:
 
-    - **App Name**: Enterprise Knowledge Agent
-    - **Short Description**: AI assistant for company policies
-    - **Full Description**: Enterprise AI assistant that answers questions about company policies, IT procedures, and employee resources
+   ```
+   enterprise-knowledge-agent
+   ```
 
-1. Enter the following **Developer information**:
+2. Under **Publish version**, enter:
 
-    - **Developer Name**: Your name
-    - **Website**: <https://contoso.com>
-    - **Privacy Policy**: <https://contoso.com/privacy>
-    - **Terms of Use**: <https://contoso.com/terms>
+   ```
+   1.0.0
+   ```
 
-1. Upload the color and outline icons you created.
-1. For **App Scope**, select **Personal** for individual chat access. You can optionally select **Team** for channel access.
-1. Select **Prepare Agent**.
+3. Under **Short description**, enter:
+
+   ```
+   AI assistant for company policies
+   ```
+
+4. Under **Description**, enter:
+
+   ```
+   Enterprise AI assistant that answers questions about company policies, IT procedures, and employee resources
+   ```
+
+5. Under **Azure Bot Services**, select an available bot service.
+
+   > **Note**: If you don't have an Azure Bot Service available, or you see an error indicating that the subscription is not registered to use the `Microsoft.BotService` namespace, register the **Microsoft.BotService** resource provider for your Azure subscription. If you don't have permission to register the provider, contact your Azure subscription administrator or trainer.
+
+6. Under **Developer**, enter your name or company name.
+
+7. Under **Developer website**, enter:
+
+   ```
+   https://example.com
+   ```
+
+   > **Note**: If your organization provides a developer website, use that website instead of the example value.
+
+8. Under **Terms of use**, enter:
+
+   ```
+   https://example.com
+   ```
+
+   > **Note**: If your organization provides a terms-of-use URL, use that URL instead of the example value.
+
+9. Under **Privacy statement**, enter:
+
+   ```
+   https://example.com
+   ```
+
+   > **Note**: If your organization provides a privacy statement URL, use that URL instead of the example value.
+
+10. Review the publishing information, then select **Next: Publish options**.
+
 
 ### Deploy to Teams
 
