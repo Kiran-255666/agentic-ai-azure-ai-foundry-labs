@@ -221,9 +221,9 @@ When you publish an agent to Teams, Foundry prepares the Teams app package and c
    Enterprise AI assistant that answers questions about company policies, IT procedures, and employee resources
    ```
 
-5. Under **Azure Bot Services**, select an available bot service.
+5. Under **Azure Bot Services**, verify that an Azure Bot Service is automatically populated.
 
-   > **Note**: If you don't have an Azure Bot Service available, or you see an error indicating that the subscription is not registered to use the `Microsoft.BotService` namespace, register the **Microsoft.BotService** resource provider for your Azure subscription. If you don't have permission to register the provider, contact your Azure subscription administrator or trainer.
+   > **Note**: In the training environment, the field may be automatically populated with a bot service named `enterprise-knowledge-agent02370`. The bot service name may be different in your environment. If a bot service is populated, leave it as is. If you see an error message instead, contact your instructor before continuing.
 
 6. Under **Developer**, enter your name or company name.
 
@@ -253,6 +253,48 @@ When you publish an agent to Teams, Foundry prepares the Teams app package and c
 
 10. Review the publishing information, then select **Next: Publish options**.
 
+### Choose a publishing option
+
+After selecting **Next: Publish options**, the **Publish options** page displays two options: **Direct publish** and **Download & customize**.
+
+#### Direct publish
+
+The **Direct publish** option publishes the agent directly from Foundry.
+
+1. Select the **Direct publish** tab.
+
+2. Under **Choose who can use this agent**, select one of the following options:
+
+   - **Just you**: Makes the agent available immediately for your personal use.
+   - **People in your organization**: Requires administrator approval. Your Microsoft 365 administrator reviews the request and assigns access.
+
+3. For this lab, select **Just you**.
+
+4. Select **Publish**.
+
+5. Wait for the publishing process to complete successfully.
+
+> **Note**: If you select **People in your organization**, your Microsoft 365 administrator must review and approve the publishing request before users can access the agent.
+
+#### Download & customize
+
+The **Download & customize** option lets you download the agent manifest, customize the package if needed, and upload it through the Teams admin center.
+
+1. Select the **Download & customize** tab.
+
+2. Review the publishing instructions.
+
+3. If required, customize the downloaded package.
+
+4. Go to the **Teams admin center** and open **Manage apps**.
+
+5. Upload the ZIP package.
+
+6. Configure the required permissions for your organization.
+
+7. Select **Download ZIP** to download the agent package.
+
+> **Note**: Use **Download & customize** when you need to customize the agent manifest or manage the app through the Teams admin center. Otherwise, use **Direct publish** for the simpler publishing workflow.
 
 ### Deploy to Teams
 
