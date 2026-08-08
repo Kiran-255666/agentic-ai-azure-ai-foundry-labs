@@ -10,6 +10,8 @@ lab:
 
 # Create a generative AI chat app
 
+***Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it***
+
 In this exercise, you'll use the Microsoft Foundry Python SDK to build a small app that sends messages to a language model and shows its replies.
 
 This exercise takes approximately **20** minutes.
