@@ -237,14 +237,26 @@ As a developer, you may spend time working in the Microsoft Foundry portal, but 
 
 1. Under **Microsoft Foundry Resources**, select **Set Default Project**.
 1. Select the existing project provided for the lab. If a default project is active already, its name appears in the resources list.
+
+    ![Screenshot](../../media/04-03-13.png)
+
+1. Under **MY RESOURCES**, select **Agents**
+
+    ![Screenshot](../../media/04-03-14.png)
+
 1. Expand the project. Under **Prompt Agents**, select `it-support-agent` to open Agent Builder.
+
+    ![Screenshot](../../media/04-03-15.png)
+
 1. In the playground chat pane, enter:
 
     ```text
     What is the policy for reporting a lost or stolen device?
     ```
+    ![Screenshot](../../media/04-03-16.png)
 
 1. Review the response. It should use the grounding data uploaded earlier.
+    ![Screenshot](../../media/04-03-17.png)
 
 > **Tip**: Use the built-in playground to quickly test agent instructions and knowledge without writing code.
 
