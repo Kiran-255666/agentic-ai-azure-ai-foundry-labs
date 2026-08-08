@@ -37,7 +37,7 @@ This lab uses the Foundry project and deployed models that are already available
 
     > **Important**: Make sure the **New Foundry** toggle is *On* so you use the updated interface for this lab.
 
-1. Select your existing Foundry project from the project selector.
+1. Select your existing Foundry project **(hakunamatata1)** from the project selector.
 1. On the project home page, verify that a chat model and an embedding model are already deployed and available.
 1. Keep the Foundry portal open. You'll use the existing chat model when creating the agent and knowledge base, and the existing embedding model when creating the knowledge source.
 
@@ -51,7 +51,7 @@ With the Foundry project selected and the deployed model available, create an ag
 
     After the agent is created, the agent playground opens. You'll now configure the agent with product information from Foundry IQ.
 
-## Configure data and Foundry IQ
+## Configure data and Foundry IQ (The instructor/moderator has already created AI search and Storage account resources for your use; feel free to skip the creation of created AI search and Storage account resources )
 
 First, add instructions to your agent. Then create a search resource, upload the product documents, and create a knowledge base that connects those documents to the agent.
 
@@ -65,15 +65,15 @@ First, add instructions to your agent. Then create a search resource, upload the
     ```
 
 1. Select **Save** to save your current agent configuration.
-1. In the **Knowledge** section, expand the **Add** dropdown and select **Connect to Foundry IQ**.
+1. In the **Knowledge** section, expand the **Add** dropdown and select **Connect to Foundry IQ**. (Please select the one which your instrutor has created for you)
 1. In the Foundry IQ setup window, select **Connect to an AI Search resource**, then select **Create new resource**.
 1. Create a search resource with the following settings:
 
     - **Resource name**: A globally unique name
     - **Subscription**: Your Azure subscription
-    - **Resource group**: Use the same resource group as your Foundry project
+    - **Resource group**: Use the same resource group as your Foundry project  - **AgenticAIEngineer**
     - **Region**: The same location as your Foundry project
-    - **Pricing tier**: Free, if available; otherwise choose Basic
+    - **Pricing tier**: Basic
     - **Foundry IQ Knowledge base capabilities**: Pause until next month
 
 The search resource provides the retrieval layer for the knowledge base. Next, upload the source product documents.
@@ -89,7 +89,7 @@ The search resource provides the retrieval layer for the knowledge base. Next, u
 1. Create a storage account with the following settings:
 
     - **Subscription**: Your Azure subscription
-    - **Resource group**: Use the same resource group as your Foundry project
+    - **Resource group**: Use the same resource group as your Foundry project - **AgenticAIEngineer**
     - **Storage account name**: A unique storage account name
     - **Region**: The same location as your Foundry project
     - **Primary service**: Azure Blob Storage or Azure Data Lake Storage
@@ -111,8 +111,8 @@ The search resource provides the retrieval layer for the knowledge base. Next, u
     - **Container name**: `contosoproducts`
     - **Authentication type**: API Key
     - **Content extraction mode**: minimal
-    - **Embedding model**: Select your available deployed embedding model
-    - **Chat completions model**: Select your available deployed chat model
+    - **Embedding model**: Select your available deployed embedding model **(text-embedding-ada-002)**
+    - **Chat completions model**: Select your available deployed chat model **(gpt-5.4-mini)**
 
 1. Select **Create**.
 1. On the knowledge base creation page, select your deployed chat model from the **Chat completions model** dropdown and leave the remaining settings unchanged.
@@ -144,6 +144,7 @@ Before using code, confirm that the portal agent can retrieve product informatio
     - **Project endpoint**: Available from the project home page or project settings
 
 ### Configure approval for tool calls
+**Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it**
 
 By default, the Foundry IQ knowledge tool runs without asking for approval. To let your application review and control each knowledge-base lookup, configure the agent to require approval before it uses the tool.
 
