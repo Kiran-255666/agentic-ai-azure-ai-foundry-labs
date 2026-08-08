@@ -264,19 +264,23 @@ After selecting **Next: Publish options**, the **Publish options** page opens.
 
 3. Wait for the publishing process to complete successfully.
 
-4. In Microsoft Teams, go to **Apps** and find **Enterprise Knowledge Agent** under **Your agents**.
+4. Click on **Publish** > **Teams & Microsoft 365 Copilot** > **Open in Teams**
+    
+    ![Screenshot of the Code button.](../../media/app.png)
 
 ### Test your agent in Teams
 
-1. Open the agent in Teams.
+1. Open the agent in Teams you might agian needed a **Foundry login to access the agent**
 
-2. Send a greeting:
+2. After login Send a greeting:
 
 ```
 
 Hello! What can you help me with?
 
 ```
+    
+    ![Screenshot of the Code button.](../../media/app-2.png)
 
 3. Test a knowledge question:
 
