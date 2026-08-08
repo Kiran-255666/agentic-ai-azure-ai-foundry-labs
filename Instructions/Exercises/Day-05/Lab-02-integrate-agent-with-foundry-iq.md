@@ -25,10 +25,11 @@ Before starting this exercise, ensure you have:
 - An [Azure subscription](https://azure.microsoft.com/free/) with permissions to create AI resources
 - [Visual Studio Code](https://code.visualstudio.com/) installed on your local machine
 - [Python 3.13](https://www.python.org/downloads/) or later installed
-- [Git](https://git-scm.com/downloads) installed on your local machine
 - Basic familiarity with the Microsoft Foundry portal and Python programming
 
 ## Create a Foundry project
+
+> **Note**: If you already have a Foundry project active from a previous lab, you can skip this section and go straight to [Create an agent](#create-an-agent).
 
 Let's start by creating a Foundry project with the new Foundry experience.
 
@@ -146,12 +147,14 @@ When you create an agent in the portal, its Foundry IQ (knowledge) tool runs **w
 
 > **Note**: The Foundry portal doesn't currently expose a setting to change this approval behavior, so you'll configure it from the Foundry Toolkit extension instead.
 
+> **Note**: If the Foundry Toolkit extension is already installed and signed in from a previous lab, skip ahead to step 3 below.
+
 1. In Visual Studio Code, select **Extensions** from the left pane (or press **Ctrl+Shift+X**), then search the marketplace for the `Foundry Toolkit for VS Code` extension from Microsoft and select **Install** (if it isn't already installed).
 
     > **Note**: The extension is currently listed as **Foundry Toolkit**, but some VS Code labels, commands, or older screenshots may still refer to **AI Toolkit**. In this lab, treat those names as referring to the same extension experience.
 
 1. Select the **Foundry Toolkit** icon in the sidebar, and sign in to your Azure account if you're prompted.
-   
+
     > **Note**: If you're unable to sign in with the Foundry Toolkit extension, you my need to select the Azure extension. Sign in there, then navigate back to the Foundry Toolkit to access your resources.
 
 1. Under **Microsoft Foundry Resources**, choose **Set Default Project** and select the project you created earlier.
@@ -165,36 +168,35 @@ Your agent will now request approval each time it uses Foundry IQ to search the 
 
 ## Connect to your agent from an app
 
-Now you'll create a Python application to interact with your agent programmatically. Starter files have been provided in the GitHub repository to help you get started quickly.
+Now you'll create a Python application to interact with your agent programmatically. Starter files have been provided in a GitHub repository to help you get started quickly.
 
-### Prepare to develop an app in Visual Studio Code
+### Download the starter code repository
 
-Now let's use Visual Studio Code to develop an app. The code files for your app have been provided in a GitHub repo.
+> **Note**: If you've already downloaded and extracted the repository in a previous lab, skip ahead to step 5 below.
 
-1. Start Visual Studio Code, and open the command palette (Shift+Ctrl+P). Then search for and run the **Git: Clone** command to clone the `https://github.com/MicrosoftLearning/mslearn-ai-agents` repo to a local folder (it doesn't matter which folder).
-1. When the repository has been cloned, open the folder in Visual Studio Code.
+1. In a browser like Microsoft Edge, browse to [https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs) and download the repository as a ZIP file into your VM.
+2. The repository will download to your Downloads folder. Right-click the file and select **Extract All** to unzip the file.
+3. In VS Code, click on the **File** menu, then select **Open Folder**.
+4. Select the folder that you unzipped in the previous step.
 
     > **Note**: If Visual Studio Code shows you a pop-up message prompting you to trust the code you are opening, click **Yes, I trust the authors** option to continue.
 
-1. Wait while additional files are installed to support the Python code projects in the repo (if prompted).
-
-    > **Note**: If you are prompted to install required assets to build and debug, select **Not Now**.
-
-1. In the **Explorer** pane, expand the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder.
+5. Once the repository opens, select **File > Open Folder** and navigate to `agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\Lab-02-integrate-agent-with-foundry-iq\python`, then choose **Select Folder**.
+6. In the **Explorer** pane, view the code files for this exercise.
 
     The provided files include application code, configuration settings, and the agent client starter code.
 
 ### Configure the application settings
 
-1. In Visual Studio Code, in the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder, open the **.env** configuration file.
+1. In Visual Studio Code, in the `Lab-02-integrate-agent-with-foundry-iq\python` folder, open the **.env** configuration file.
 1. In the code file, replace the **your_project_endpoint** placeholder with the endpoint for your project (copied from the project **Home** page in the Foundry portal) and ensure that the AGENT_NAME variable is set to your agent name (which should be *product-expert-agent*).
 1. After you've replaced the placeholder, save the file.
 
-### Complete the agent client code
+### Complete the agent client code (Note: We have the code updated in the mentioned files instructions but verify before you start the execution, so that there are no indentation issues)
 
 > **Tip**: As you add code, be sure to maintain the correct indentation. Use the comment indentation levels as a guide.
 
-1. In Visual Studio Code, in the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder, open the **agent_client.py** code file.
+1. In Visual Studio Code, in the `Lab-02-integrate-agent-with-foundry-iq\python` folder, open the **agent_client.py** code file.
 1. Review the starter code that has been provided, including:
     - Import statements and configuration loading
     - The `send_message_to_agent()` function structure
@@ -323,7 +325,7 @@ Now let's use Visual Studio Code to develop an app. The code files for your app 
 
 Now you'll run your application and test the agent's ability to retrieve information from the knowledge base.
 
-1. In Visual Studio Code, open an integrated terminal for the **Labfiles/04-integrate-agent-with-foundry-iq/Python** folder by right-clicking the folder and selecting **Open in Integrated Terminal**.
+1. In Visual Studio Code, open an integrated terminal for the `Lab-02-integrate-agent-with-foundry-iq\python` folder by right-clicking the folder and selecting **Open in Integrated Terminal**.
 1. First, create a virtual environment and install dependencies.
 
     ```
@@ -417,5 +419,3 @@ In this exercise, you:
 - Tested the agent's ability to retrieve and synthesize information from the knowledge base with user-controlled approval for external tool access
 
 This demonstrates how to integrate AI agents with Foundry IQ to create intelligent applications that can search and retrieve information from enterprise knowledge bases while maintaining conversational context.
-
-

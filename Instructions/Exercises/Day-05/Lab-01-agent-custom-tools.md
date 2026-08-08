@@ -31,7 +31,7 @@ Before starting this exercise, ensure you have:
 
 ## Create a Foundry project with the Foundry Toolkit for VS Code extension
 
-As a developer, you may spend some time working in the Foundry portal; but you’re also likely to spend a lot of time in Visual Studio Code. The Foundry Toolkit for VS Code extension provides a convenient way to work with Foundry project resources without leaving the development environment.
+As a developer, you may spend some time working in the Foundry portal; but you're also likely to spend a lot of time in Visual Studio Code. The Foundry Toolkit for VS Code extension provides a convenient way to work with Foundry project resources without leaving the development environment.
 
 1. Open Visual Studio Code.
 
@@ -55,31 +55,11 @@ As a developer, you may spend some time working in the Foundry portal; but you�
 
     When the deployment is complete, you should see the project appear in the Foundry Toolkit pane as the default project.
 
-## Deploy a model
+## Use the deployed model
 
-At the core of any generative AI project, there’s at least one generative AI model. In this task, you'll deploy a model from the Model Catalog to use with your agent.
+Use the deployed model that's already available in your Foundry project. Right-click the name of the project deployment and select **Copy Project Endpoint**. You'll need this URL to connect your agent to the Foundry project in the next steps.
 
-1. When the "Project deployed successfully" popup appears, select the **Deploy a new model** button. This opens the Model Catalog.
-
-   > **Tip**: You can also access the Model Catalog by selecting the **+** icon next to **Models** in the Resources section, or by pressing **F1** and running the command **Foundry Toolkit: Show model catalog**.
-
-1. In the Model Catalog, locate the **gpt-5** model (you can use the search bar to find it quickly).
-
-1. Select **Deploy** next to the gpt-5 model.
-
-1. Configure the deployment settings:
-   - **Deployment name**: Enter a name like "gpt-5"
-   - **Deployment type**: Select **Global Standard** (or **Standard** if Global Standard is not available)
-   - **Model version**: Leave as default
-   - **Tokens per minute**: Leave as default
-
-1. Select **Deploy to Microsoft Foundry** in the bottom-left corner.
-
-1. Wait for the deployment to complete. Your deployed model will appear under the **Models** section in the Resources view.
-
-1. Right-click the name of the project deployment and select **Copy Project Endpoint**. You'll need this URL to connect your agent to the Foundry project in the next steps.
-
-    ![Screenshot of copying the project endpoint in the Foundry Toolkit VS Code extension.](../../media/vs-code-endpoint.png)
+![Screenshot of copying the project endpoint in the Foundry Toolkit VS Code extension.](../../media/vs-code-endpoint.png)
 
 ## Clone the starter code repository
 
@@ -113,7 +93,7 @@ For this exercise, you'll use starter code that will help you connect to your Fo
     pip install -r requirements.txt
     ```
 
-1. Open the **.env** file, replace the **your_project_endpoint** placeholder with the endpoint for your project (copied from the project deployment resource in the Foundry Toolkit VS Code extension) and ensure that the MODEL_DEPLOYMENT_NAME variable is set to your model deployment name. Use **Ctrl+S** to save the file after making these changes.
+1. Open the **.env** file, replace the **your_project_endpoint** placeholder with the endpoint for your project (copied from the project deployment resource in the Foundry Toolkit VS Code extension) and ensure that the MODEL_DEPLOYMENT_NAME variable is set to your deployed model's name. Use **Ctrl+S** to save the file after making these changes.
 
 Now you're ready to create an AI agent that uses MCP server tools to access external data sources and APIs.
 
@@ -462,5 +442,3 @@ Now that you've created the agent with the function tools, you can send messages
 1. Enter `quit` to exit the application.
 
     You can also use `deactivate` to exit the Python virtual environment in the terminal.
-
-
