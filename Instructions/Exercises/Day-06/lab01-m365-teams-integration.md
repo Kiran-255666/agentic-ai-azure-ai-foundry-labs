@@ -37,7 +37,13 @@ This lab uses the Foundry project and deployed model already provided for the tr
     > **Important**: For this lab, use the **New Foundry** experience.
 
 1. Select the existing training Foundry project from the project selector.
-1. On the project home page, verify that the deployed chat model is available.
+
+    ![Screenshot](../../media/new-ui.png)
+
+1. On the project home page, verify that the deployed chat model is available can be seen at the bottom of the page Under recent work Models
+
+    ![Screenshot](../../media/ui-2.png)
+
 1. Keep the Foundry portal open. You'll create your own agent in this project next.
 
 ## Create your agent
