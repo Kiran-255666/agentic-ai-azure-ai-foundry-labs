@@ -10,6 +10,8 @@ lab:
 
 # Extend agents with Model Context Protocol (MCP) tools
 
+**Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it**
+
 In this exercise, you'll use the Foundry Toolkit for VS Code extension to create an agent that can use Model Context Protocol (MCP) server tools to access external data sources and APIs. The agent will be able to retrieve up-to-date information and interact with custom services through MCP tools.
 
 This exercise should take approximately **60** minutes to complete.
