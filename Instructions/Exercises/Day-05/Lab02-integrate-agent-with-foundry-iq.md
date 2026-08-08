@@ -164,6 +164,9 @@ By default, the Foundry IQ knowledge tool runs without asking for approval. To l
 
 1. Under **Microsoft Foundry Resources**, choose **Set Default Project** and select the project used in this lab.
 1. Expand the project. Under **Prompt Agents**, select `product-expert-agent` to open **Agent Builder**.
+
+    ![Screenshot of the Foundry Toolkit for VS Code extension in the Extensions Marketplace.](../../media/abc.png)
+   
 1. In the **Tools** section, add the **Azure AI Search** tool. Select the connection and knowledge base that you created earlier.
 
     > **Note**: The portal may add a **Web search** tool to new agents by default. Use the three dots on the **Azure AI Search** tool associated with your knowledge base, not another tool.
