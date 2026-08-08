@@ -39,17 +39,17 @@ Microsoft Foundry projects organize models, resources, data, and other assets us
 
 1. On the project home page, select **Start building** in the **Build an agent** card.
 
-    ![Microsoft Foundry project home page with the Start building button highlighted in the Build an agent card.](media/../../04-03-02-2.jpg)
+    ![Microsoft Foundry project home page with the Start building button highlighted in the Build an agent card.](media/../../04-03-02-2.png)
 
 1. If Foundry displays the **All resources** page, select the existing project provided for this lab. In this example, the project is named `hakunamatata1`.
 
-    ![All resources page showing the existing hakunamatata1 project.](../../media/04-03-01.jpg)
+    ![All resources page showing the existing hakunamatata1 project.](../../media/04-03-01.png)
 
 1. In the **Create an agent** dialog, enter `it-support-agent` as the **Agent name**.
 
 1. Select **Create**.
 
-    ![Create an agent dialog with it-support-agent entered as the agent name.](../../media/04-03-03-3.jpg)
+    ![Create an agent dialog with it-support-agent entered as the agent name.](../../media/04-03-03-3.png)
 
 The agent playground opens. An available deployed model should already be selected for you.
 
