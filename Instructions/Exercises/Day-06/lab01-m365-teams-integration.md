@@ -1,22 +1,22 @@
 ---
 lab:
-    title: 'Deploy agents to Microsoft Teams and Copilot'
-    description: 'Publish AI agents to Microsoft Teams and Microsoft 365 Copilot for enterprise access'
+    title: 'Deploy agents to Microsoft Teams'
+    description: 'Publish AI agents to Microsoft Teams"'
     level: 300
     duration: 40
     islab: true
     status: 'released'
 ---
 
-# Deploy agents to Microsoft Teams and Copilot
+# Deploy agents to Microsoft Teams 
 
-In this lab, you'll create and publish your own AI agent to **Microsoft Teams** and **Microsoft 365 Copilot**. You'll use the existing Foundry project and deployed model available for the training, configure an enterprise knowledge agent with grounding documents, and publish it so employees can access it where they work.
+In this lab, you'll create and publish your own AI agent to **Microsoft Teams**. You'll use the existing Foundry project and deployed model available for the training, configure an enterprise knowledge agent with grounding documents, and publish it so employees can access it where they work.
 
 This lab focuses on **agent creation, deployment, and publishing workflows**. You won't create a new Foundry project or deploy a model; however, you will create, configure, test, and publish your own agent in the existing project.
 
 This lab takes approximately **40** minutes.
 
-> **Note**: Publishing to Microsoft 365 Copilot requires a Copilot license. Teams deployment works with standard Microsoft 365 accounts.
+> **Note**: Teams deployment works with standard Microsoft 365 accounts.
 
 ## Prerequisites
 
@@ -24,7 +24,6 @@ Before starting this lab, ensure you have:
 
 - An [Azure subscription](https://azure.microsoft.com/free/)
 - A **Microsoft 365 account** with Teams access
-- A **Microsoft 365 Copilot license** (optional, for Copilot publishing)
 - Basic familiarity with the Microsoft Foundry portal
 - Access to the existing Foundry project and its deployed model
 
@@ -365,61 +364,7 @@ After the agent package is prepared, you can publish it to Teams.
 - Test the same knowledge query in the Foundry playground.
 - Confirm that the uploaded files finished processing.
 
-## Publish to Microsoft 365 Copilot
 
-You can use the same publishing workflow to make the agent available as a Microsoft 365 Copilot extension.
-
-> **Note**: This section requires a Microsoft 365 Copilot license. If you don't have one, you can still read through the steps to understand the workflow.
-
-### Start the publishing flow
-
-1. Return to the Foundry portal at [https://ai.azure.com](https://ai.azure.com).
-1. Navigate to **Build** > **Agents** > **enterprise-knowledge-agent**.
-1. Select **Publish**.
-1. Select **Publish to Teams and Microsoft 365 Copilot**.
-1. Select **Continue**.
-
-> **Note**: This is the same publishing flow used for Teams. A single publishing process can make the agent available in both Teams and Copilot.
-
-### Choose publish scope
-
-Select the distribution scope that fits your scenario:
-
-| Scope | Visibility | Admin approval | Best for |
-|---|---|---|---|
-| **Shared** | Under **Your agents** in the agent store | Not required | Personal testing and small teams |
-| **Organization** | Under **Built by your org** for all users | Required | Organization-wide distribution |
-
-For this lab, select **Shared** for immediate personal access.
-
-### Complete publishing
-
-1. If required, enter the same app name, descriptions, publisher details, and icons used for the Teams configuration.
-1. Select **Prepare Agent** and wait for packaging to finish.
-1. Select **Continue the in-product publishing flow**.
-1. Confirm the scope selection and select **Publish**.
-1. Wait for the publishing success message.
-
-### Access in Microsoft 365 Copilot
-
-1. Open **Microsoft 365 Copilot** at [copilot.microsoft.com](https://copilot.microsoft.com), or open Copilot from a Microsoft 365 app.
-1. Open the agent store or **Extensions** panel.
-1. Find **Enterprise Knowledge Agent** under **Your agents**.
-1. Start a conversation:
-
-    ```
-    @Enterprise Knowledge Agent What are the laptop security requirements?
-    ```
-
-1. You can also select the agent and ask:
-
-    ```
-    What MFA methods are supported for company systems?
-    ```
-
-1. Verify that Copilot routes the query to your agent and returns information grounded in the IT security policy.
-
-> **Note**: For **Organization** scope, an administrator must approve the app in the [Microsoft 365 admin center](https://admin.cloud.microsoft/?#/agents/all/requested) under **Requests**. Once approved, the agent appears under **Built by your org**.
 
 ## Cleanup
 
@@ -441,7 +386,3 @@ Deleting the agent also removes associated publishing configurations.
 1. Find **Enterprise Knowledge Agent**.
 1. Select **...** > **Uninstall**.
 1. Confirm the uninstallation.
-
-### Remove the Copilot extension
-
-If you published the agent to Copilot, the extension becomes inactive after the agent is deleted. For organization-wide publishing, an administrator may also need to remove the app from the organization catalog.
