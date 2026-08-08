@@ -56,7 +56,7 @@ Start the job now. It may take a while, so you can test gpt-5.4-mini in the play
 
 1. In the Foundry portal, select **Fine-tune** in the left navigation.
 
-    ![Fine-tuning page with an arrow pointing to Start fine-tuning.](media/fine-tune-001.jpg)
+    ![Fine-tuning page with an arrow pointing to Start fine-tuning.](../../media/fine-tune-001.jpg)
 
 1. Select **Start fine-tuning**.
 1. In **Basic details**, configure the job as follows:
@@ -65,14 +65,14 @@ Start the job now. It may take a while, so you can test gpt-5.4-mini in the play
     - **Model**: gpt-4.1
     - **Training type**: Data Zone
 
-    ![Basic details page showing Supervised, gpt-4.1, and Data Zone selected.](media/fine-tune-002.jpg)
+    ![Basic details page showing Supervised, gpt-4.1, and Data Zone selected.](../../media/fine-tune-002.jpg)
 
 1. Select **Next**.
 1. In **Datasets**, under **Training data source**, select **Upload or drag and drop**. Upload `travel-finetune-hotel.jsonl`.
 1. Confirm that the upload finishes and that the Dataset preview displays the file content and JSONL rows.
 1. Leave **Validation data source (optional)** empty.
 
-    ![Datasets page showing travel-finetune-hotel.jsonl uploaded and previewed.](media/fine-tune-003.jpg)
+    ![Datasets page showing travel-finetune-hotel.jsonl uploaded and previewed.](../../media/fine-tune-003.jpg)
 
 1. Select **Next** to open **Optional settings**.
 1. Configure or confirm these settings:
@@ -82,7 +82,7 @@ Start the job now. It may take a while, so you can test gpt-5.4-mini in the play
     - **Automatically deploy model after job completion**: Turn this on
     - **Hyperparameter tuning**: Keep **Default** selected for batch size, number of epochs, and learning-rate multiplier
 
-    ![Optional settings page showing a generated display name, Random seed, automatic deployment control, and default hyperparameters.](media/fine-tune-004.jpg)
+    ![Optional settings page showing a generated display name, Random seed, automatic deployment control, and default hyperparameters.](../../media/fine-tune-004.jpg)
 
 1. Select **Submit** to start the job.
 

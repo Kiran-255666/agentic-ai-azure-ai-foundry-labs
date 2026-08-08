@@ -29,7 +29,7 @@ Before starting this exercise, ensure you have:
 
 > **Important**: The Microsoft Foundry project, resource, region, subscription, and deployed model are already provided for this lab. Do **not** create a new Foundry resource or project.
 
->  Python 3.13 is available, but some dependencies may not yet be compiled for that release. The lab has been successfully tested with Python 3.13.12.
+> Python 3.13 is available, but some dependencies may not yet be compiled for that release. The lab has been successfully tested with Python 3.13.12.
 
 ## Open the existing Microsoft Foundry project
 
@@ -39,17 +39,17 @@ Microsoft Foundry projects organize models, resources, data, and other assets us
 
 1. On the project home page, select **Start building** in the **Build an agent** card.
 
-    ![Microsoft Foundry project home page with the Start building button highlighted in the Build an agent card.](media/04-03-02-2.jpg)
+    ![Microsoft Foundry project home page with the Start building button highlighted in the Build an agent card.](media/../../04-03-02-2.jpg)
 
 1. If Foundry displays the **All resources** page, select the existing project provided for this lab. In this example, the project is named `hakunamatata1`.
 
-    ![All resources page showing the existing hakunamatata1 project.](media/04-03-01.jpg)
+    ![All resources page showing the existing hakunamatata1 project.](../../media/04-03-01.jpg)
 
 1. In the **Create an agent** dialog, enter `it-support-agent` as the **Agent name**.
 
 1. Select **Create**.
 
-    ![Create an agent dialog with it-support-agent entered as the agent name.](media/04-03-03-3.jpg)
+    ![Create an agent dialog with it-support-agent entered as the agent name.](../../media/04-03-03-3.jpg)
 
 The agent playground opens. An available deployed model should already be selected for you.
 
