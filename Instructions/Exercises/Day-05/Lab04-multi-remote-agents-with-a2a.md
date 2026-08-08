@@ -101,7 +101,7 @@ For this exercise, you'll use starter code that will help you connect to your Fo
 2. The Repository will get download in Downloads folder, right click the file and select Extract all to unzip the zip file.
 3. In VS Code, click on File menu, then select open Folder.
 4. Select the folder that you have unzipped in the previous step.
-1. Once the repository opens, Open Visual Studio code, select **File > Open Folder** and navigate to `agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\Lab-05-multi-remote-agents-with-a2a\python`
+1. Once the repository opens, Open Visual Studio code, select **File > Open Folder** and navigate to `agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\Lab-04-multi-remote-agents-with-a2a\python`
 
 1. Right-click on the **requirements.txt** file and select **Open in Integrated Terminal**.
 

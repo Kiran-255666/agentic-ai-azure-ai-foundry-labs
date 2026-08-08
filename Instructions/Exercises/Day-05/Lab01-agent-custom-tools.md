@@ -61,27 +61,36 @@ Use the deployed model that's already available in your Foundry project. Right-c
 
 ![Screenshot of copying the project endpoint in the Foundry Toolkit VS Code extension.](../../media/vs-code-endpoint.png)
 
-## Clone the starter code repository
+# Get the application files from GitHub
 
-For this exercise, you'll use starter code that will help you connect to your Foundry project and create an agent that uses custom function tools.
+> **Note**: If you've already downloaded and extracted the repository in a previous lab, skip ahead to step 5 below.
 
-1. In VS Code, open the Command Palette (**Ctrl+Shift+P** or **View > Command Palette**).
+1. If you already downloaded and extracted this repository's ZIP file in a previous exercise, skip ahead to the next step, and navigate directly to the folder path below. Otherwise, follow the steps below to download it first.
+1. Open a web browser and go to the [lab files on GitHub](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs).
+1. On the repository page, select the green **`<> Code`** button, and then select **Download ZIP**.
 
-1. Type **Git: Clone** and select it from the list.
+    ![Screenshot of the Code button.](../../media/code.png)
 
-1. Enter the repository URL:
+1. Once the download finishes, locate the ZIP file and extract it to a folder on your computer.
+1. In the extracted folder, navigate to:
 
     ```
-    https://github.com/MicrosoftLearning/mslearn-ai-agents.git
+    agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\Lab-01-agent-custom-tools\Python
     ```
 
-1. Choose a location on your local machine to clone the repository.
+    This folder already contains everything you need for this exercise
 
-1. When prompted, select **Open** to open the cloned repository in VS Code.
+    > **Tip**: If you're not sure which folder contains the exercise files, check with your trainer.
 
-1. Once the repository opens, select **File > Open Folder** and navigate to `mslearn-ai-agents/Labfiles/02-agent-custom-tools`, then choose **Select Folder**.
+1. In **File Explorer**, select the address bar at the top of the window, type the following command, and press **Enter**:
 
-1. In the Explorer pane, expand the **Python** folder to view the code files for this exercise.
+    ```
+    code .
+    ```
+
+    This opens the folder directly in Visual Studio Code.
+
+    > **Tip**: If `code .` doesn't work, open the folder manually in Visual Studio Code.
 
 1. Right-click on the **requirements.txt** file and select **Open in Integrated Terminal**.
 

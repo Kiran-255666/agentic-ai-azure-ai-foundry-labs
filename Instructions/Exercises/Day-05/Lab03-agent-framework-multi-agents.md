@@ -126,7 +126,7 @@ For this exercise, you'll use starter code that will help you connect to your Fo
 2. The repository will download to your Downloads folder. Right-click the file and select **Extract All** to unzip the file.
 3. In VS Code, click on the **File** menu, then select **Open Folder**.
 4. Select the folder that you unzipped in the previous step.
-5. Once the repository opens, select **File > Open Folder** and navigate to `agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\Lab-02-integrate-agent-with-foundry-iq\python`, then choose **Select Folder**.
+5. Once the repository opens, select **File > Open Folder** and navigate to `agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\Lab-03-integrate-agent-with-foundry-iq\python`, then choose **Select Folder**.
 6. In the Explorer pane, view the code files for this exercise.
 7. Right-click on the **requirements.txt** file and select **Open in Integrated Terminal**.
 8. In the terminal, enter the following command to install the required Python packages in a virtual environment:

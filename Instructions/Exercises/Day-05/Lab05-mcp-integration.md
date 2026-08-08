@@ -108,7 +108,7 @@ For this exercise, you'll use starter code that will help you connect to your Fo
 2. The Repository will get download in Downloads folder, right click the file and select Extract all to unzip the zip file.
 3. In VS Code, click on File menu, then select open Folder.
 4. Select the folder that you have unzipped in the previous step.
-5. Once the repository opens, from Visual Studio Code, select **File > Open Folder** and navigate to `agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\lab06-mcp-integration\Python`, then choose **Select Folder**.
+5. Once the repository opens, from Visual Studio Code, select **File > Open Folder** and navigate to `agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\lab-05-mcp-integration\Python`, then choose **Select Folder**.
 7. Right-click the **requirements.txt** file and select **Open in Integrated Terminal**. Alternatively, press **Ctrl+Shift+`** to open the integrated terminal and navigate to the file location.
 8. In the terminal, enter the following command to install the required Python packages in a virtual environment:
 
