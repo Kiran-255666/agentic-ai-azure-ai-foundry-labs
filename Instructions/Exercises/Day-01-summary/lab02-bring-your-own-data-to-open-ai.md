@@ -74,13 +74,13 @@ In this section, you'll use the deployed model playground in Microsoft Foundry t
 
 1. In the **Use a model** card, select **View deployments**.
 
-    ![Screenshot of the Foundry project home page with View deployments selected.](../../media/1-2.png)
+    ![Screenshot of the Foundry project home page with View deployments selected.](../../media/1.png)
 
 1. In **Models** > **Deployments**, select the deployed chat model provided for the lab.
 
 1. In the model details pane, select **Open in playground**.
 
-    ![Screenshot of the Models deployments page with a deployed model selected and the Open in playground button available.](../../media/2-3.png)
+    ![Screenshot of the Models deployments page with a deployed model selected and the Open in playground button available.](../../media/2.png)
 
 1. The model playground opens. Verify that the selected deployment is shown at the top of the left pane.
 
