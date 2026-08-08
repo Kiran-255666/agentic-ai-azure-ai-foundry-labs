@@ -86,7 +86,12 @@ Start the job now. It may take a while, so you can test gpt-5.4-mini in the play
 
 1. Select **Submit** to start the job.
 
-> **Note**: Fine-tuning and automatic deployment can take 60 minutes or longer. To check progress, open the fine-tuning job and select the **Monitor** tab.
+> **Note**: Fine-tuning and automatic deployment can take 60 minutes or longer. To check progress, open the fine-tuning job and select the **Monitor tab**. The steps to reach the Monitor tab are shown in the following screenshots.
+
+![Snippet](../../media/ftt1.png)
+![Snippet](../../media/m.png)
+![Snippet](../../media/w8.png)
+
 
 # Test gpt-5.4-mini in the playground
 
@@ -101,11 +106,14 @@ While the fine-tuning job runs, test the prepared gpt-5.4-mini model and note ho
 
     The response may be generic. The travel application needs more specific behavior and tone.
 
+![Snippet](../../media/w1.png)
+
 1. In the **Instructions** field, enter:
 
     ```text
     You are an AI assistant that helps people plan their travel.
     ```
+![Snippet](../../media/w2.png)
 
 1. Ask the same question again:
 
@@ -114,6 +122,8 @@ While the fine-tuning job runs, test the prepared gpt-5.4-mini model and note ho
     ```
 
     The assistant may say that it can help book flights, hotels, or rental cars. The travel application should avoid that behavior.
+
+![Snippet](../../media/w3.png)
 
 1. Replace the instructions with the following prompt:
 
@@ -144,6 +154,7 @@ While the fine-tuning job runs, test the prepared gpt-5.4-mini model and note ho
     ```text
     What's the best way to get around the city?
     ```
+![Snippet](../../media/w3.png)
 
 # Review the training data
 
@@ -166,6 +177,8 @@ Each entry includes system instructions, a travel-related user question, and the
 
 1. In the left navigation, select **Fine-tune** and check the status of the job you started earlier.
 1. Select the job to view its details. Open the **Logs** tab if you need to review completed tasks or errors.
+![Snippet](../../media/logs.png)
+
 1. When fine-tuning finishes, verify that the fine-tuned model is available in **Deployments**.
 
     > **Tip**: If automatic deployment did not finish successfully, open the completed fine-tuning job and make the fine-tuned model available from its details page.
