@@ -264,26 +264,36 @@ As a developer, you may spend time working in the Microsoft Foundry portal, but 
 
 Create a Python application that interacts with the agent programmatically.
 
-1. In VS Code, open the Command Palette by pressing **Ctrl+Shift+P**.
-1. Enter **Git: Clone** and select the command.
-1. Enter this repository URL:
+1. If you already downloaded and extracted this repository's ZIP file in a previous exercise, skip ahead to the next step, and navigate directly to the folder path below. Otherwise, follow the steps below to download it first.
+1. Open a web browser and go to the [lab files on GitHub](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs).
+1. On the repository page, select the green **`<> Code`** button, and then select **Download ZIP**.
 
-    ```text
-    https://github.com/MicrosoftLearning/mslearn-ai-agents.git
+    ![Screenshot of the Code button.](../../media/code.png)
+
+1. Once the download finishes, locate the ZIP file and extract it to a folder on your computer.
+1. In the extracted folder, navigate to:
+
+    ```
+    agentic-ai-azure-ai-foundry-labs\labfiles\Day-04\Lab-03-build-agent-portal-and-vscode\Python
     ```
 
-1. Select a local location to clone the repository.
-1. When prompted, select **Open** to open the cloned repository in VS Code.
-1. Select **File > Open Folder**, browse to `mslearn-ai-agents/Labfiles/01-build-agent-portal-and-vscode/Python`, then select **Select Folder**.
-1. In Explorer, open `agent_with_functions.py`. If the file is empty, replace it with the lab's provided `agent_with_functions.py` implementation.
-1. Save the file.
+    This folder already contains everything you need for this exercise
 
-> **Note**: The supplied client application uses `AIProjectClient`, retrieves the named portal agent, creates a conversation, sends user prompts through the Responses API, and saves generated charts or cited container files under `agent_outputs`.
+    > **Tip**: If you're not sure which folder contains the exercise files, check with your trainer.
+
+1. In **File Explorer**, select the address bar at the top of the window, type the following command, and press **Enter**:
+
+    ```
+    code .
+    ```
+
+    This opens the folder directly in Visual Studio Code.
+
+    > **Tip**: If `code .` doesn't work, open the folder manually in Visual Studio Code.
 
 ### Configure environment and run the application
 
-1. In Explorer, locate `.env.example` and `requirements.txt`.
-1. Duplicate `.env.example` and rename the copy to `.env`.
+1. In Explorer, locate `.env` and `requirements.txt`.
 1. In `.env`, replace the placeholder endpoint with the endpoint of the existing lab project:
 
     ```text
@@ -294,7 +304,7 @@ Create a Python application that interacts with the agent programmatically.
     To get the endpoint, in Foundry Toolkit right-click the active project and select **Copy Endpoint**. If that command is unavailable, open the existing project in the Foundry portal and copy the project endpoint from its overview page.
 
 1. Save `.env`.
-1. Open **Terminal > New Terminal** in VS Code.
+1. Open **Terminal > New Terminal** in VS Code, or use the handy shortcut **Ctrl + Shift + `**.
 1. Create and activate a virtual environment, then install dependencies:
 
     ```powershell
@@ -303,17 +313,35 @@ Create a Python application that interacts with the agent programmatically.
     pip install -r requirements.txt
     ```
 
-1. Authenticate to Azure:
+1. **Authenticate to Azure:**
 
-    ```bash
-    az login
-    ```
+   First, verify whether you are already authenticated by running:
 
-1. Run the application:
+   ```bash
+   az account show
+   ```
 
-    ```bash
-    python agent_with_functions.py
-    ```
+   If your Azure account details are displayed correctly, you can continue to the next step.
+
+   If the account details are not displayed correctly, you need to sign in with a different account, or you encounter an authentication error such as **"Please run 'az login' to set up an account"**, refresh your Azure CLI authentication by running:
+
+   ```bash
+   az logout
+   ```
+
+   Then sign in again:
+
+   ```bash
+   az login
+   ```
+
+   Select the required Azure subscription and tenant when prompted.
+
+2. **Run the application:**
+
+   ```bash
+   python agent_with_functions.py
+   ```
 
 ## Test the client application
 
