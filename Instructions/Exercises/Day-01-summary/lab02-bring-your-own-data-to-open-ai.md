@@ -80,7 +80,7 @@ In this section, you'll use the deployed model playground in Microsoft Foundry t
 
 1. In the model details pane, select **Open in playground**.
 
-    ![Screenshot of the Models deployments page with a deployed model selected and the Open in playground button available.](../../media/2.png)
+    ![Screenshot of the Models deployments page with a deployed model selected and the Open in playground button available.](../../media/22.png)
 
 1. The model playground opens. Verify that the selected deployment is shown at the top of the left pane.
 
