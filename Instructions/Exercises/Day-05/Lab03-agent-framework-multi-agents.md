@@ -10,6 +10,8 @@ lab:
 
 # Develop a multi-agent solution with Microsoft Agent Framework
 
+**Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it**
+
 In this exercise, you'll practice using the sequential orchestration pattern in the Microsoft Agent Framework SDK. You'll create a simple pipeline of three agents that work together to process customer feedback and suggest next steps. You'll create the following agents:
 
 - The Summarizer agent will condense raw feedback into a short, neutral sentence.
