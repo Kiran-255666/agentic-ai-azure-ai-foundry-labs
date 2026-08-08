@@ -104,12 +104,11 @@ As a developer, you may spend time working in the Microsoft Foundry portal, but 
 
 For this exercise, you'll use starter code that will help you connect to your Foundry project and create an agent that uses MCP server tools.
 
-1. In a browser like Microsoft Edge, browse the URL: https://github.com/Kiran-255666/Agentic_AI_Training_Foundations.git and download the repository into your VM.
+1. In a browser like Microsoft Edge, browse the URL: https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs and download the repository into your VM. **If already downloaded earlier Move to Step-5**.
 2. The Repository will get download in Downloads folder, right click the file and select Extract all to unzip the zip file.
 3. In VS Code, click on File menu, then select open Folder.
 4. Select the folder that you have unzipped in the previous step.
-5. Once the repository opens, from Visual Studio Code, select **File > Open Folder** and navigate to `Agentic_AI_Training_Foundations/Labfiles/03-mcp-integration`, then choose **Select Folder**.
-6. In the Explorer pane, expand the **Python** folder to view the code files for this exercise.
+5. Once the repository opens, from Visual Studio Code, select **File > Open Folder** and navigate to `agentic-ai-azure-ai-foundry-labs\labfiles\Day-05\lab06-mcp-integration\Python`, then choose **Select Folder**.
 7. Right-click the **requirements.txt** file and select **Open in Integrated Terminal**. Alternatively, press **Ctrl+Shift+`** to open the integrated terminal and navigate to the file location.
 8. In the terminal, enter the following command to install the required Python packages in a virtual environment:
 
