@@ -4,33 +4,47 @@ from dotenv import load_dotenv
 
 # Add references
 from azure.ai.projects import AIProjectClient
-from azure.ai.projects.models import FunctionTool
-from azure.identity import DefaultAzureCredential
 from azure.ai.projects.models import PromptAgentDefinition, FunctionTool
-from openai.types.responses.response_input_param import FunctionCallOutput, ResponseInputParam
+from azure.identity import AzureCliCredential
+from openai.types.responses.response_input_param import (
+    FunctionCallOutput,
+    ResponseInputParam,
+)
+
 from functions import (
     next_visible_event,
     calculate_observation_cost,
-    generate_observation_report
+    generate_observation_report,
 )
 
 
 def main():
 
     # Clear the console
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
+
+    print("1. Starting agent...")
 
     # Load environment variables from .env file
     load_dotenv()
     project_endpoint = os.getenv("PROJECT_ENDPOINT")
     model_deployment = os.getenv("MODEL_DEPLOYMENT_NAME")
 
+    print("2. Environment variables loaded")
+
     # Connect to the project client
+    print("3. Connecting to Azure AI Project...")
+
     with (
-        DefaultAzureCredential() as credential,
-        AIProjectClient(endpoint=project_endpoint, credential=credential) as project_client,
+        AzureCliCredential() as credential,
+        AIProjectClient(
+            endpoint=project_endpoint,
+            credential=credential
+        ) as project_client,
         project_client.get_openai_client() as openai_client,
     ):
+
+        print("4. Connected to Azure AI Project")
 
         # Define the event function tool
         event_tool = FunctionTool(
@@ -41,7 +55,10 @@ def main():
                 "properties": {
                     "location": {
                         "type": "string",
-                        "description": "continent to find the next visible event in (e.g. 'north_america', 'south_america', 'australia')",
+                        "description": (
+                            "continent to find the next visible event in "
+                            "(e.g. 'north_america', 'south_america', 'australia')"
+                        ),
                     },
                 },
                 "required": ["location"],
@@ -53,13 +70,19 @@ def main():
         # Define the observation cost function tool
         cost_tool = FunctionTool(
             name="calculate_observation_cost",
-            description="Calculate the cost of an observation based on the telescope tier, number of hours, and priority level.",
+            description=(
+                "Calculate the cost of an observation based on the "
+                "telescope tier, number of hours, and priority level."
+            ),
             parameters={
                 "type": "object",
                 "properties": {
                     "telescope_tier": {
                         "type": "string",
-                        "description": "the tier of the telescope (e.g. 'standard', 'advanced', 'premium')",
+                        "description": (
+                            "the tier of the telescope "
+                            "(e.g. 'standard', 'advanced', 'premium')"
+                        ),
                     },
                     "hours": {
                         "type": "number",
@@ -67,10 +90,17 @@ def main():
                     },
                     "priority": {
                         "type": "string",
-                        "description": "the priority level of the observation (e.g. 'low', 'normal', 'high')",
+                        "description": (
+                            "the priority level of the observation "
+                            "(e.g. 'low', 'normal', 'high')"
+                        ),
                     },
                 },
-                "required": ["telescope_tier", "hours", "priority"],
+                "required": [
+                    "telescope_tier",
+                    "hours",
+                    "priority",
+                ],
                 "additionalProperties": False,
             },
             strict=True,
@@ -85,7 +115,9 @@ def main():
                 "properties": {
                     "event_name": {
                         "type": "string",
-                        "description": "the name of the astronomical event being observed",
+                        "description": (
+                            "the name of the astronomical event being observed"
+                        ),
                     },
                     "location": {
                         "type": "string",
@@ -93,19 +125,30 @@ def main():
                     },
                     "telescope_tier": {
                         "type": "string",
-                        "description": "the tier of the telescope used for the observation (e.g. 'standard', 'advanced', 'premium')",
+                        "description": (
+                            "the tier of the telescope used for the observation "
+                            "(e.g. 'standard', 'advanced', 'premium')"
+                        ),
                     },
                     "hours": {
                         "type": "number",
-                        "description": "the number of hours the telescope was used for the observation",
+                        "description": (
+                            "the number of hours the telescope was used "
+                            "for the observation"
+                        ),
                     },
                     "priority": {
                         "type": "string",
-                        "description": "the priority level of the observation (e.g. 'low', 'normal', 'high')",
+                        "description": (
+                            "the priority level of the observation "
+                            "(e.g. 'low', 'normal', 'high')"
+                        ),
                     },
                     "observer_name": {
                         "type": "string",
-                        "description": "the name of the person who conducted the observation",
+                        "description": (
+                            "the name of the person who conducted the observation"
+                        ),
                     },
                 },
                 "required": [
@@ -114,7 +157,7 @@ def main():
                     "telescope_tier",
                     "hours",
                     "priority",
-                    "observer_name"
+                    "observer_name",
                 ],
                 "additionalProperties": False,
             },
@@ -122,6 +165,8 @@ def main():
         )
 
         # Create a new agent with the function tools
+        print("5. Creating astronomy agent...")
+
         agent = project_client.agents.create_version(
             agent_name="astronomy-agent",
             definition=PromptAgentDefinition(
@@ -131,20 +176,31 @@ def main():
                 information about astronomical events and calculate telescope rental costs.
                 Use the available tools to assist users with their inquiries.
                 """,
-                tools=[event_tool, cost_tool, report_tool],
+                tools=[
+                    event_tool,
+                    cost_tool,
+                    report_tool,
+                ],
             ),
         )
 
-        # Create a thread for the chat session
+        print("6. Agent created successfully")
+
+        # Create a conversation for the chat session
+        print("7. Creating conversation...")
+
         conversation = openai_client.conversations.create()
 
-        # Create a list to hold function call outputs that will be sent back as input to the agent
+        print("8. Ready for input")
+
+        # Create a list to hold function call outputs
         input_list: ResponseInputParam = []
 
         while True:
 
             user_input = input(
-                "Enter a prompt for the astronomy agent. Use 'quit' to exit.\nUSER: "
+                "Enter a prompt for the astronomy agent. "
+                "Use 'quit' to exit.\nUSER: "
             ).strip()
 
             if user_input.lower() == "quit":
@@ -158,18 +214,18 @@ def main():
                     {
                         "type": "message",
                         "role": "user",
-                        "content": user_input
+                        "content": user_input,
                     }
                 ],
             )
 
-            # Retrieve the agent's response, which may include function calls
+            # Retrieve the agent's response
             response = openai_client.responses.create(
                 conversation=conversation.id,
                 extra_body={
                     "agent_reference": {
                         "name": agent.name,
-                        "type": "agent_reference"
+                        "type": "agent_reference",
                     }
                 },
                 input=input_list,
@@ -185,6 +241,8 @@ def main():
                 if item.type == "function_call":
 
                     result = None
+
+                    print(f"Calling tool: {item.name}")
 
                     if item.name == "next_visible_event":
                         result = next_visible_event(
@@ -209,15 +267,16 @@ def main():
                         )
                     )
 
-            # Send function call outputs back to the model and retrieve a response
+            # Send function call outputs back to the model
             if input_list:
+
                 response = openai_client.responses.create(
                     input=input_list,
                     previous_response_id=response.id,
                     extra_body={
                         "agent_reference": {
                             "name": agent.name,
-                            "type": "agent_reference"
+                            "type": "agent_reference",
                         }
                     },
                 )
@@ -226,13 +285,15 @@ def main():
             print(f"AGENT: {response.output_text}")
 
         # Delete the agent when done
+        print("Deleting agent...")
+
         project_client.agents.delete_version(
             agent_name=agent.name,
-            agent_version=agent.version
+            agent_version=agent.version,
         )
 
         print("Deleted agent.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
