@@ -91,9 +91,9 @@ Before you start the lab exercises, you must create a development environment fo
 
 1. Select **+ New publisher** below the **Publisher** drop-down.
 
-1. For **Display name**, enter `Fabrikam`
+1. For **Display name**, enter `Fabrikam_unique_Suffix`
 
-1. For **Name**, enter `fabrikam`
+1. For **Name**, enter `fabrikam_unique_suffix`
 
 1. For **Prefix**, enter `fab`
 
