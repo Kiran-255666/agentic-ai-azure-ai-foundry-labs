@@ -156,6 +156,8 @@ By default, the Foundry IQ knowledge tool runs without asking for approval. To l
 
     > **Note**: The extension is currently listed as **Foundry Toolkit**, but some labels, commands, or older screenshots may still refer to **AI Toolkit**. In this lab, treat these names as the same extension experience.
 
+    ![Screenshot of the Foundry Toolkit for VS Code extension in the Extensions Marketplace.](../../media/foundry-toolkit-extension.png)
+   
 1. Select the **Foundry Toolkit** icon in the sidebar and sign in to Azure if prompted.
 
     > **Note**: If you cannot sign in through Foundry Toolkit, select the Azure extension and sign in there. Then return to Foundry Toolkit to access your resources.
