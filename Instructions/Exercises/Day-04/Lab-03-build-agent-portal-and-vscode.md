@@ -53,6 +53,8 @@ Microsoft Foundry projects organize models, resources, data, and other assets us
 
 The agent playground opens. An available deployed model should already be selected for you.
 
+    ![Screeshot of the playground.](../../media/04-03-04.png)
+
 > **Important**: The existing project already contains the required resources and deployed model. Continue by configuring the agent; do not select **Create project**, deploy another model, or change the project resource settings.
 
 ## Configure your agent with instructions and grounding data
@@ -72,28 +74,38 @@ Now configure the agent with instructions, File search, and Code interpreter.
     - When creating tickets, collect all necessary information before proceeding
     ```
 
+    ![Screeshot.](../../media/04-03-05.png)
+
 1. Download the IT policy document from the lab repository:
 
     ```text
-    https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-build-agent-portal-and-vscode/IT_Policy.txt
+    https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs/blob/main/labfiles/Day-04/Lab-03-build-agent-portal-and-vscode/IT_Policy.txt
     ```
 
     Save the file locally as `IT_Policy.txt`.
 
     > **Note**: This document contains sample policies for password resets, software installation requests, and hardware troubleshooting.
 
-1. Return to the agent playground. In the **Tools** section, select **Add**, then add **File search** and **</> Code interpreter**.
-1. To the right of **Add**, select **Upload files**. Under **Attach files**, upload `IT_Policy.txt`, then select **Attach**.
+1. Return to the agent playground. In the **Tools** section, select **Add**. You will get a dropdown; under Most Popular, you can find **Code interpreter**. Toggle the switch from off to on. If it is not found, select **Add** again, then click on **Add tools**. You can then choose **Code interpreter** from the displayed options and click on **Add tool**.
+
+    ![Screeshot.](../../media/04-03-07.png)
+
+1. In the **Tools** section, select **Add**. You will get a dropdown; then click on **Add tools**. You can then choose **File search** from the displayed options and click on **Add tool**.
+
+    ![Screeshot.](../../media/04-03-06.png)
+
+1. After adding the tool, you will be redirected to a page where you can see **Drag and drop files here or browse for files**. You can either drag and drop the `IT_Policy.txt` file or browse your local files and upload it. If you have not downloaded the file earlier, you can download it from [GitHub](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs/blob/main/labfiles/Day-04/Lab-03-build-agent-portal-and-vscode/IT_Policy.txt). After attaching the file, you will see the Status as **Success**. Then, select **Attach**.
+
 1. Wait for the file to be indexed.
 1. Download the system performance data file:
 
     ```text
-    https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-agents/main/Labfiles/01-build-agent-portal-and-vscode/system_performance.csv
+    https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs/blob/main/labfiles/Day-04/Lab-03-build-agent-portal-and-vscode/system_performance.csv
     ```
 
     Save the file locally as `system_performance.csv`.
 
-1. To the right of **</> Code interpreter**, select **+ Files**, then upload `system_performance.csv`.
+1. To the right of **</> Code interpreter**, select **+ Files**, then upload `system_performance.csv` by either drag and drop the `system_performance.csv` file or browse your local files and upload it.After attaching the file, you will see the Status as **Success**. Then, select **Attach**.
 
     > **Note**: This CSV file contains simulated CPU, memory, and disk metrics over time.
 
@@ -110,6 +122,9 @@ Test the agent to confirm that it uses the grounding data and code interpreter.
     ```
 
 1. Review the response. The agent should use the IT policy document.
+
+    ![Screeshot.](../../media/04-03-08.png)
+
 1. Enter:
 
     ```text
@@ -117,17 +132,24 @@ Test the agent to confirm that it uses the grounding data and code interpreter.
     ```
 
 1. Review the response and observe how the agent uses the uploaded policy data.
+
+    ![Screeshot.](../../media/04-03-09.png)
+
 1. Test Code interpreter by entering:
 
     ```text
     Can you analyze the system performance data and tell me if there are any concerning trends?
     ```
 
+    ![Screeshot.](../../media/04-03-10.png)
+
 1. Request a visualization:
 
     ```text
     Create a chart showing CPU usage over time from the performance data
     ```
+
+    ![Screeshot.](../../media/04-03-11.png)
 
 The agent should use Code interpreter to analyze the CSV data and generate a visualization.
 
