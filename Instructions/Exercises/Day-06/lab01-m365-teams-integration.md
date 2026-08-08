@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Deploy agents to Microsoft Teams and Copilot'
+    title: 'Deploy agents to Microsoft Teams'
     description: 'Publish AI agents to Microsoft Teams"'
     level: 300
     duration: 40
