@@ -49,7 +49,7 @@ Microsoft Foundry projects organize models, resources, data, and other assets us
 
 1. Select **Create**.
 
-    ![Create an agent dialog with it-support-agent entered as the agent name.](../../media/04-03-03-3.png)
+    ![Create an agent dialog with it-support-agent entered as the agent name.](../../media/04-03-03.png)
 
 The agent playground opens. An available deployed model should already be selected for you.
 
