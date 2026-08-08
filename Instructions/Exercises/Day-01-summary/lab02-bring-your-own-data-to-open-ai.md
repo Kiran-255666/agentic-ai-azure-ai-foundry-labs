@@ -68,39 +68,38 @@ This exercise takes approximately **30** minutes.
 
 # Explore prompt engineering techniques
 
-Start by testing a few prompt engineering techniques in the Chat playground to see how system instructions and examples influence the model's responses.
+In this section, you'll use the deployed model playground in Microsoft Foundry to see how instructions and examples change the model's response.
 
-1. Open a web browser and go to `https://oai.azure.com`.
-1. A pop-up may appear listing your available Azure OpenAI resources. If it appears, select the resource your trainer or lab environment set up for you. If no pop-up appears, continue to the next step.
+1. If you are not already on the project home page, open the [Microsoft Foundry portal](https://ai.azure.com), select your training project, and open **Home**.
 
-    ![Screenshot of the pop-up listing Azure OpenAI resources, with an arrow pointing to the resource name to select.](../../media/pop-up.png)
+1. In the **Use a model** card, select **View deployments**.
 
-    This takes you to the Microsoft Foundry **Overview** page for that resource.
+    ![Screenshot of the Foundry project home page with View deployments selected.](../../media/1-2.jpg)
 
-1. In the left-hand panel, select **Playgrounds**.
+1. In **Models** > **Deployments**, select the deployed chat model provided for the lab.
 
-    ![Screenshot of the Playgrounds page, with an arrow pointing to the Chat playground card.](../../media/chat-playground.png)
+1. In the model details pane, select **Open in playground**.
 
-1. On the **Chat playground** card, select **Try the Chat playground**.
+    ![Screenshot of the Models deployments page with a deployed model selected and the Open in playground button available.](../../media/2-3.jpg)
 
-    The Chat playground opens with two main areas:
-    - **Setup**: where you select your model deployment and configure the assistant's behavior
-    - **Chat history**: where you submit prompts and view the model's responses
+1. The model playground opens. Verify that the selected deployment is shown at the top of the left pane.
 
-    ![Screenshot of the Chat playground, showing the Setup pane with the deployment selected and the default instructions field, next to the Chat history pane.](../../media/chat-playground-01.png)
+    The playground has two main areas:
 
-1. In **Setup**, under **Deployment**, verify that your model deployment is selected.
-1. In the **Give the model instructions and context** field, verify that the following default system prompt is present:
+    - **Instructions**: Where you define the model's behavior and response format.
+    - **Chat**: Where you send prompts and review responses.
+
+    ![Screenshot of the new Foundry model playground with Instructions and Chat panes.](../../media/3.jpg)
+
+1. In **Instructions**, verify that the following default instruction is present:
 
     ```text
     You are an AI assistant that helps people find information.
     ```
 
-    ![Screenshot of the Chat playground showing the default system prompt entered in the Setup pane.](../../media/default-prompt-01.png)
+1. If the instruction is not present, enter it manually.
 
-1. If the prompt isn't present, enter it manually.
-1. If you modified the system prompt, select **Apply changes**. Otherwise, continue to the next step.
-1. In the message box under **Chat history**, submit the following prompt:
+1. In the **Chat** message box, submit the following prompt:
 
     ```text
     What kind of article is this?
@@ -114,89 +113,71 @@ Start by testing a few prompt engineering techniques in the Chat playground to s
     Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
     ```
 
-    Notice that the model typically describes the article rather than returning a single category label.
+1. Review the response. With the default instruction, the model will usually describe or summarize the article instead of returning one category label.
 
-1. In **Setup**, replace the system prompt with the following:
+1. In **Instructions**, replace the default instruction with the following:
 
     ```text
-    You are a news classification assistant. Categorize each news article using a single category label. Respond with only one of the following categories: News, Sports, Entertainment, Technology, Business, Health, Science, or Other.
+    You are a news classification assistant.
+
+    Categorize each news article using a single category label.
+
+    Respond with only one of these categories:
+    News, Sports, Entertainment, Technology, Business, Health, Science, or Other.
     ```
 
-    ![Screenshot of the Chat playground with the news classification system prompt entered in the Setup pane.](../../media/prompt-001.png)
-
-1. Select **Add section**, and then select **Examples**.
-
-    ![Screenshot of the Add section menu, with an arrow pointing to the Examples option.](../../media/examples.png)
-
-1. Add the following example:
-
-    **User:**
+1. In the **Chat** pane, submit the following prompt. This prompt includes examples directly in the message because the new playground does not provide separate User and Assistant example fields.
 
     ```text
-    What kind of article is this?
-    ---
+    Classify each article using exactly one category:
+    News, Sports, Entertainment, Technology, Business, Health, Science, or Other.
+
+    Example 1:
+    Article:
     New York Baseballers Wins Big Against Chicago
 
-    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
+    New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night.
 
-    Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
-
-    The Chicago Cyclones' two hits came in the 2nd and the 5th innings but were unable to get the runner home to score.
-    ```
-
-    **Assistant:**
-
-    ```text
+    Category:
     Sports
-    ```
 
-1. Add a second example:
-
-    **User:**
-
-    ```text
-    Categorize this article:
-    ---
+    Example 2:
+    Article:
     Joyous moments at the Oscars
 
-    The Oscars this past week were quite something!
+    This year's Academy Awards were full of emotional performances, laughs, and memorable moments.
 
-    Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears. These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
-
-    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrow's rerun of all the festivities.
-    ```
-
-    **Assistant:**
-
-    ```text
+    Category:
     Entertainment
+
+    Now classify this article:
+    ---
+    Severe drought likely in California
+
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+
+    Return only the category.
     ```
 
-1. Select **Apply changes**.
-1. An **Update system message?** dialog appears, informing you that updating the system message will start a new chat session and previous messages won't be included in new API requests. Select **Continue**.
-1. In **Chat history**, notice that a new chat session has started. The message "The assistant setup has been updated. Previous messages won't be used as context for new queries." is displayed.
-1. In **Chat history**, resubmit the same drought article prompt from earlier.
-
-    The updated system instructions and examples guide the model to respond with a consistent category label, such as:
+1. Verify that the model returns a single category label similar to:
 
     ```text
     News
     ```
 
-    Depending on the model version, the exact wording may vary, but the response should follow the classification format defined by the system prompt and examples.
+    This demonstrates that clear instructions, a defined output format, and examples help produce more consistent responses.
 
-    ![Screenshot of the Chat history showing the drought article prompt and the model's single-word category response.](../../media/response.png)
-
-1. In **Setup**, restore the default system prompt:
+1. In **Instructions**, replace the classification instruction with the following default instruction:
 
     ```text
     You are an AI assistant that helps people find information.
     ```
 
-    Remove the examples, and then select **Apply changes**.
-
-1. If prompted with the **Update system message?** dialog, select **Continue**.
-1. In **Chat history**, submit the following prompt:
+1. In the **Chat** pane, submit the following prompt:
 
     ```text
     # 1. Create a list of animals
@@ -204,19 +185,19 @@ Start by testing a few prompt engineering techniques in the Chat playground to s
     # 3. Combine them randomly into a list of 25 animal and name pairs
     ```
 
-    The model will likely interpret this as a request for a list of steps or plain-language output rather than executable code.
+1. Review the response. The model may treat the prompt as a plain-language request instead of a request for executable code.
 
-1. In **Setup**, change the system prompt to:
+1. In **Instructions**, replace the instruction with:
 
     ```text
     You are a coding assistant helping write Python code.
     ```
 
-1. Select **Apply changes**.
-1. If prompted with the **Update system message?** dialog, select **Continue**.
-1. Resubmit the same prompt from the previous step.
+1. Send the same animal-and-name prompt again.
 
-    This time, the model generates Python code that performs the requested tasks, demonstrating how changing the system prompt influences the style and format of the model's responses.
+1. Review the response. The model should now produce Python code that creates lists of animals and names, then combines them into pairs.
+
+1. When you finish testing, you can leave the playground open or return to the project home page to continue with the application section.
 
 # Get the application files from GitHub
 
