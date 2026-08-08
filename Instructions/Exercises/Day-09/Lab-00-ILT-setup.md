@@ -32,7 +32,7 @@ Before you start the lab exercises, you must create a development environment fo
    - **Region**: default region
    - **Name**: *Your name*
 
-   ![Create an environment in the Power Platform Admin center.](../../media/create-environment.png)
+   
 
 1. Expand **Change default settings** and configure the following:
    - **Environment group**: None
