@@ -23,23 +23,16 @@ Before you start the lab exercises, you must create a development environment fo
 
 1. Close any pop-up messages that are displayed.
 
-### Task 1.2 - Add Dataverse to the default environment
 
-1. Select the ellipses (**...**) for the **Contoso (default)** environment and select **Add Dataverse**.
-
-   ![Add Dataverse to the default environment in the Power Platform Admin center.](../../media/add-dataverse.png)
-
-1. Leave all of the default settings and select **Add**.
-
-### Task 1.3 - Create a new environment
+### Task 1.1 - Create a new environment
 
 1. In the **Environments** page, select **+ New** to create a new environment with the following settings:
 
-   - **Type**: Developer
+   - **Type**: Trail
    - **Region**: default region
    - **Name**: *Your name*
 
-   ![Create an environment in the Power Platform Admin center.](../../media/create-environment.png)
+   
 
 1. Expand **Change default settings** and configure the following:
    - **Environment group**: None
@@ -98,9 +91,9 @@ Before you start the lab exercises, you must create a development environment fo
 
 1. Select **+ New publisher** below the **Publisher** drop-down.
 
-1. For **Display name**, enter `Fabrikam`
+1. For **Display name**, enter `Fabrikam_unique_Suffix`
 
-1. For **Name**, enter `fabrikam`
+1. For **Name**, enter `fabrikam_unique_suffix`
 
 1. For **Prefix**, enter `fab`
 
