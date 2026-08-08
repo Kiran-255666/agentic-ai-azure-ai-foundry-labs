@@ -9,6 +9,7 @@ lab:
 ---
 
 # Utilize prompt engineering in your app
+**Note: We have already updated the mentioned files with the code mentioned in the instructions, but we would highly suggest going through it before executing it**
 
 How you write a prompt has a direct effect on how an Azure OpenAI model responds. The model can tailor and format its output if you ask clearly, but the same request phrased two different ways can produce very different results.
 
