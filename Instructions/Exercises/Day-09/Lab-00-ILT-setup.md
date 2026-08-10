@@ -45,6 +45,7 @@ Before you start the lab exercises, you must create a development environment fo
 
    > [!NOTE]
    > Currency defaults based on your region (for example, INR for India). Enable Dynamics 365 apps is disabled for Trial environments — it's only available for Production or Sandbox environments.
+   ![Environment Save Button.](../../media/Save.png)
 
 1. Select **Save** and wait until the environment state is **Ready** (use **Refresh** to update the display).
 
