@@ -89,13 +89,24 @@ You'll write a small Python app that connects to your Foundry project and holds 
     You should see a code file, a configuration file for app settings, and a file listing the Python packages the app needs.
 
 1. Open this `chat-app` folder in a terminal or command-line window.
-1. Install the required packages:
+1. **Install the required packages:**
 
-    ```
-    python -m venv labenv
-    .\labenv\Scripts\Activate.ps1
-    pip install -r requirements.txt
-    ```
+   Create and activate a Python virtual environment, then install the required dependencies:
+
+   ```powershell
+   python -m venv labenv
+   .\labenv\Scripts\Activate.ps1
+   pip install -r requirements.txt
+   ```
+
+   > **Note:** If `python -m venv labenv` returns an error in the Virtual Machine, use the Windows Python Launcher instead:
+   >
+   > ```powershell
+   > py -m venv labenv
+   > .\labenv\Scripts\Activate.ps1
+   > pip install -r requirements.txt
+   > ```
+
 
 1. Open the configuration file to edit it:
 
