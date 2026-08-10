@@ -57,15 +57,21 @@ Before you start the lab exercises, you must create a development environment fo
 ### Task 1.3 - Access Copilot Studio
 
 1. In a new browser tab, navigate to `https://copilotstudio.microsoft.com/` and sign in if prompted.
-
    > [!NOTE]
-   > If Copilot Studio doesn't load your environment, get the environment ID (GUID) from the environment's page at `https://admin.powerplatform.microsoft.com/manage/environments`, then open `https://copilotstudio.microsoft.com/environments/<your-environment-id>/home` directly. You can find your `<your-environment-id>` by clicking your environment and, inside Details, locating the Environment ID.
-
-1. If prompted, select **Get Started** and keep the default country or region settings.
-1. Skip any welcome messages.
-1. In the upper right corner of the page, use the Environment Selector to switch to the environment you created.
-
-   ![Select your environment in the Copilot Studio.](../../media/select-environment.png)
+   > If Copilot Studio doesn't load your environment, get the environment ID (GUID) from the environment's page at `https://admin.powerplatform.microsoft.com/manage/environments`, then open `https://copilotstudio.microsoft.com/environments/<your-environment-id>/home` directly. You can find your `<your-environment-id>` by clicking your environment and, inside **Details**, locating the **Environment ID**.
+2. If prompted, select **Get Started** and keep the default country or region settings.
+3. Skip any welcome messages.
+4. Look at the **lower-left corner** of the page. You will see your account name at the very bottom. **Just above your account name is the Environment Selector.**
+5. Check the Environment Selector. If your **named environment** is already shown there, **skip to Task 1.4 - Create a solution**.
+6. If your **named environment** is not shown, click the **Environment Selector**.
+   ![Environment Selector.](../../media/u1.png)
+7. The **Switch environment** menu will open.
+   ![Environment Selector.](../../media/u2.png)
+8. You will see **Default environments** and **Supported environments**.
+9. Under **Supported environments**, click your **named environment**.
+   ![Environment Selector.](../../media/u3.png)
+10. Your **named environment** should now be shown in the Environment Selector.
+   ![Environment Selector.](../../media/u4.png)
 
 ### Task 1.4 - Create a solution
 
