@@ -27,7 +27,7 @@ Before you start the lab exercises, you must create a development environment fo
    ![Environment page's select new.](../../media/ClickNew.png)
 1. In the **New environment** panel, set **Type** to Trial and **Region** to the default region shown (a local region provides quicker data access).
 1. Enter your name in the **Name** field.
-   ![Environment page's select new.](../../media/ClickNew.png)
+   ![Environment page's select new.](../../media/NewEnvironment.png)
 1. Expand **Change default settings**. You'll see **Add a Dataverse data store?** and **Pay-as-you-go with Azure?**. Toggle **Add a Dataverse data store?** to **Yes**.
    ![Environment page's select new.](../../media/DataverseToggleYes.png)
    > [!NOTE]
