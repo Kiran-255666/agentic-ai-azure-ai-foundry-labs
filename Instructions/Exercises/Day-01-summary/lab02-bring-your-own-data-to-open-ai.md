@@ -253,31 +253,39 @@ In this section, you'll use the deployed model playground in Microsoft Foundry t
 ## Create a Python virtual environment
 
 1. In the Visual Studio Code terminal, make sure you're in the exercise's `python` folder.
-1. Create a virtual environment named `.venv`:
 
-    ```powershell
-    python -m venv .venv
-    ```
+2. Create a virtual environment named `.venv`:
 
-1. Activate the virtual environment:
+   ```powershell
+   python -m venv .venv
+   ```
 
-    ```powershell
-    .venv\Scripts\Activate.ps1
-    ```
+   > **Note:** If `python -m venv .venv` returns an error in the Virtual Machine, use the Windows Python Launcher instead:
+   >
+   > ```powershell
+   > py -m venv .venv
+   > ```
 
-    After activation, you should see `(.venv)` at the beginning of the terminal prompt.
+3. Activate the virtual environment:
 
-    > **Tip**: If PowerShell prevents the activation script from running, open a Command Prompt terminal and use:
-    >
-    > ```cmd
-    > .venv\Scripts\activate.bat
-    > ```
+   ```powershell
+   .venv\Scripts\Activate.ps1
+   ```
 
-1. Install the required packages:
+   After activation, you should see `(.venv)` at the beginning of the terminal prompt.
 
-    ```powershell
-    pip install -r requirements.txt
-    ```
+   > **Tip:** If PowerShell prevents the activation script from running, open a Command Prompt terminal and use:
+   >
+   > ```cmd
+   > .venv\Scripts\activate.bat
+   > ```
+
+4. Install the required packages:
+
+   ```powershell
+   pip install -r requirements.txt
+   ```
+
 
 ## Run your application
 
