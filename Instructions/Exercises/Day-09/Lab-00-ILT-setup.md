@@ -59,7 +59,7 @@ Before you start the lab exercises, you must create a development environment fo
 1. In a new browser tab, navigate to `https://copilotstudio.microsoft.com/` and sign in if prompted.
 
    > [!NOTE]
-   > If Copilot Studio doesn't load your environment, get the environment ID (GUID) from the URL on the environment's page at `https://admin.powerplatform.microsoft.com/manage/environments`, then open `https://copilotstudio.microsoft.com/environments/<your-environment-id>/home` directly.
+   > If Copilot Studio doesn't load your environment, get the environment ID (GUID) from the environment's page at `https://admin.powerplatform.microsoft.com/manage/environments`, then open `https://copilotstudio.microsoft.com/environments/<your-environment-id>/home` directly. You can find your `<your-environment-id>` by clicking your environment and, inside Details, locating the Environment ID.
 
 1. If prompted, select **Get Started** and keep the default country or region settings.
 1. Skip any welcome messages.
