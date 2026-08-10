@@ -48,7 +48,7 @@ This exercise will take approximately **60** minutes to complete.
 - You can use:
   - the environment and **Lab Exercises** solution created in the **ILT Setup** lab, or
   - your own existing environment and solution.
-- If you do not already have an environment and solution prepared, complete the steps in the **ILT Setup** lab before continuing.
+- If you do not already have an environment and solution prepared, complete the steps in the [**ILT Setup**](https://github.com/Kiran-255666/agentic-ai-azure-ai-foundry-labs/blob/main/Instructions/Exercises/Day-09/Lab-00-ILT-setup.md) lab before continuing.
   
 > [!IMPORTANT]
 > You may notice a new Copilot Studio experience that is currently in preview. These labs use the current Copilot Studio interface, so some steps and screenshots may not match the preview experience. To follow the lab instructions successfully, use the current Copilot Studio UI throughout these exercises.
