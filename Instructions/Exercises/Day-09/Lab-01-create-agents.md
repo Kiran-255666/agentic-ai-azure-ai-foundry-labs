@@ -69,6 +69,7 @@ In this exercise, you will create an agent by using a template, and then test th
 1. In the lower-left corner of the page, verify that you are working in the environment you want to use for this exercise. If not, follow `### Task 1.3 - Access Copilot Studio` in `Lab-00-ILT-setup.md`
 
 1. Select **Agents** in the left-hand navigation.
+   ![Clicking Agents.](../../media/ClickingAgents.png)
 
 1. Under **Start with an agent template** section, select the **Safe Travels** template.
 
