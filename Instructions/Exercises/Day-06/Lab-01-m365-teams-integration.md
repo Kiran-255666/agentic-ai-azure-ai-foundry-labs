@@ -53,7 +53,7 @@ Now create an enterprise knowledge agent that you'll configure and publish to Te
 
 1. On the Foundry project home page, select **Start building** in the **Build an agent** card.
 
-    ![Screenshot of the Build an agent card and Start building button.](../../media/sb-1-3.jpg)
+    ![Screenshot of the Build an agent card and Start building button.](../../media/sb-1.png)
 
 1. In the **Create an agent** dialog, enter the following agent name:
 
@@ -63,11 +63,11 @@ Now create an enterprise knowledge agent that you'll configure and publish to Te
 
 1. Select **Create**.
 
-    ![Screenshot of the Create an agent dialog with the agent name entered.](../../media/pp-1-2.jpg)
+    ![Screenshot of the Create an agent dialog with the agent name entered.](../../media/pp-1.png)
 
 1. After the agent is created, the agent playground opens. Verify that the existing deployed chat model is selected at the top of the configuration pane.
 
-    ![Screenshot of the enterprise-knowledge-agent playground with the deployed model selected.](../../media/pg-1.jpg)
+    ![Screenshot of the enterprise-knowledge-agent playground with the deployed model selected.](../../media/pg-1.png)
 
     The deployed model is already available in the project, so you can now focus on configuring the agent's behavior and knowledge grounding.
 
