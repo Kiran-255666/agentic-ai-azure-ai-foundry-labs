@@ -157,7 +157,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Select **Agents** in the left-hand navigation.
 
-1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **Cog** image.
+1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **⚙️** icon.
 
    ![Screenshot of the agent settings dialog.](../../media/agent-settings-dialog.png)
 
@@ -167,6 +167,8 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Enter `govbenefitsagent` for the *Schema name*.
 
+   ![Screenshot of the Schema Name](../../media/SchemaName.png)
+
 1. Select **Update**.
 
 1. In the *Start building by describing what your agent needs to do* text box, Enter the following prompt:
@@ -175,7 +177,7 @@ In this exercise, you will create a new agent using natural language to answer q
    You are an agent that assists with questions related to claiming US government benefits.
    ```
 
-1. Select the **Send** icon.
+1. Select the **Send (→)** icon.
 
    Your agent will be created.
 
@@ -189,7 +191,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. In the **Details** section, select **Edit**.
 
-1. In the **Name** text box, enter **`US Benefits Assistant`**.
+1. In the **Name** text box, enter **`US Benefits Assistant`**. If this name is already displayed, leave it unchanged and continue to the next step.
 
 1. In the **Description** text box, enter **`Helps users with questions related to US government benefit programs`**.
 
@@ -210,7 +212,7 @@ In this exercise, you will create a new agent using natural language to answer q
    > [!NOTE]
    > Agent instructions guide how the agent should behave, but they do not strictly enforce behavior. In later labs, you will learn how to change behavior by using topics, knowledge, and generative answers with restricted knowledge sources.
 
-1. In the **Suggested prompts** section, select **Add suggested prompts**.
+1. Scroll down to the **Suggested prompts** section, then select **Add suggested prompts**.
 
 1. For **Title**, enter `Health`.
 
@@ -316,6 +318,13 @@ In this exercise, you will create a new agent using natural language to answer q
 1. Select **Save**.
 
 1. Select **Open demo website**.
+
+   > [!NOTE]
+   > You may see the following message when opening the Demo website:
+   >
+   > *You may not have access to this agent due to authentication settings. Please contact the owner to use this demo.*
+   >
+   > This step is optional and is not required to complete the lab, so you can safely skip it.
 
 1. Enter the following prompt:
 
