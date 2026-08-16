@@ -398,9 +398,11 @@ In this exercise, you will test topic routing and confirm the conversation follo
 
    Notice that the conversation flow returns to the **Estimate Repair** topic.
 
-1. Enter `Tomorrow 10:00 AM` to the **What date and time do you want to book the repair estimate?** prompt.
+1. Enter `Tomorrow 10:00 AM` in response to the **What date and time would you like to book the repair estimate?** prompt.
 
-   The agent responds with a confirmation message indicating the repair estimate has been scheduled.
+   The agent responds with:
+   
+   `Great! Let me get that scheduled for you.`
 
 ## Summary
 
