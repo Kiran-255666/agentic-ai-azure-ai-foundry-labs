@@ -92,6 +92,8 @@ In this exercise, you will create an agent by using a template, and then test th
 
 1. Select the **Topics** tab and select the **System** filter.
 
+   ![System Filter.](../../media/System.png)
+
 1. Select the **Conversational Start** topic. Review the contents of the **Message** node. Note that the contents of the message are displayed in the **Test** pane.
 
    ![Conversation Start topic from the Safe Travels template.](../../media/safe-travels-conversation-start-topic.png)
@@ -115,6 +117,8 @@ In this exercise, you will create an agent by using a template, and then test th
    The **Greeting** topic should be selected and the response is provided from the message node in the Greeting topic.
 
 1. At the top of the **Test** pane, select the **Start new test session** icon **+**.
+
+   ![New Session.](../../media/NewSessionn.png)
 
 1. Enter the following prompt:
 
