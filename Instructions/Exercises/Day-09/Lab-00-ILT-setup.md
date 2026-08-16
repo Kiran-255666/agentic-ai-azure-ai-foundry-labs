@@ -67,8 +67,8 @@ Before you start the lab exercises, you must create a development environment fo
    > 4. Open `https://copilotstudio.microsoft.com/environments/<your-environment-id>/home`, replacing `<your-environment-id>` with the copied environment ID.
 2. If prompted, select **Get Started** and keep the default country or region settings.
 3. Skip any welcome messages.
-4. Look at the **lower-left corner** of the page. You will see your account name at the very bottom. **Just above your account name is the Environment Selector.**
-5. Check the Environment Selector. If your **named environment** is already shown there, **skip to Task 1.4 - Create a solution**.
+4. Look at the **upper-right corner** of the page. Just to the left of the **Settings** ⚙️ icon, you will see the **Environment Selector** showing your current environment.
+5. Check the **Environment Selector**. If your *named environment* is already displayed, **skip to Task 1.4 - Create a solution**. If it is not displayed, continue with the following steps to select your *named environment*.
 6. If your **named environment** is not shown, click the **Environment Selector**.
    ![Environment Selector.](../../media/u1.png)
 7. The **Switch environment** menu will open.
