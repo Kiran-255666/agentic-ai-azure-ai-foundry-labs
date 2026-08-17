@@ -63,9 +63,9 @@ In this exercise, you will create a Dataverse table that will be used as a knowl
 
 ### Task 1.1 – Create a table for expense claims
 
-1. In a web browser, navigate to **Power Apps Maker portal** at `https://make.powerapps.com/` and sign in if prompted. Skip any welcome messages.
+1. In a web browser, navigate to **Power Apps Maker portal** at `https://make.powerapps.com/` and sign in if prompted. Click **Get started**, then skip any welcome messages.
 
-1. At the top of the page, verify that you are working in the environment you want to use for this exercise.
+1. At the top of the page, check the current environment. If your environment is not selected, click the environment name, find your environment under **Build apps with Dataverse**, and select it.
 
    ![Select your environment in the Maker portal.](../../media/select-powerapps-environment.png)
 
@@ -75,7 +75,7 @@ In this exercise, you will create a Dataverse table that will be used as a knowl
 
 1. Select the **Get started with Copilot** tile.
 
-1. In the **Get started with Copilot** dialog, select the **Table options** icon, and select **One table**.
+1. **In the Get started with Copilot dialog**, select the **Horizontal Sliders Icon ☷**, and then select **One table**. After selecting **One table**, click anywhere outside the dialog to return to the **Tables** page. 
 
    ![Table options in the Maker portal.](../../media/dataverse-table-options.png)
 
@@ -90,7 +90,7 @@ In this exercise, you will create a Dataverse table that will be used as a knowl
     > [!NOTE]
     > The generated table schema may vary slightly from the screenshot shown in this lab. Minor differences in column naming or formatting are expected.
 
-1. A table will be created. Make a note of the name of the table.
+1. **A table will be created.** Note down the table name somewhere convenient, such as in a Notepad file, as you will need it in the following steps.
 
    ![Proposed table.](../../media/dataverse-table-proposed.png)
 
@@ -108,7 +108,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Select **Agents** in the left-hand navigation.
 
-1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **Cog** image.
+1. In the bottom-left of the *Start building by describing what your agent needs to do* text box, select the **Agent Settings** icon, which is displayed as a **⚙️** icon.
 
    ![Screenshot of the agent settings dialog.](../../media/agent-settings-dialog.png)
 
