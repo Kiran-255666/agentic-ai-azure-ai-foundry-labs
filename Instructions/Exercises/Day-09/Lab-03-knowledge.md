@@ -206,7 +206,7 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Select the **Synonyms** tab.
 
-1. In the **Expense Type** row, select **+ Add synonyms**.
+1. Scroll down to find the **Expense Type** row, select **+ Add synonyms**.
 
 1. Enter `Expense label` and select **Add**.
 
