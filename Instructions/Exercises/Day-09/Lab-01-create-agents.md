@@ -236,7 +236,7 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. For **Name**, enter `Government benefits`.
 
-1. For **Description**, enter `This knowledge source contains information on government programs that may help you pay for food, housing, health care, and other basic living expenses.`.
+1. For **Description**, enter `This knowledge source contains information on government programs that may help you pay for food, housing, health care, and other basic living expenses`.
 
 1. Select **Add to agent**.
 
@@ -256,7 +256,7 @@ In this exercise, you will create a new agent using natural language to answer q
    - For data-related answers respond with bullet points.
    ```
 
-1. In the **Knowledge** section, set **Allow ungrounded responses** to **Off**.
+1. Scroll down you will find **Knowledge** section, set **Allow ungrounded responses** to **Off**.
 
 1. In the **Knowledge** section, set **Use information from the Web** to **On**.
 
