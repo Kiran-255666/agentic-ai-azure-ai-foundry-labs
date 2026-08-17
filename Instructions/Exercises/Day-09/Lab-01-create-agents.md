@@ -319,13 +319,6 @@ In this exercise, you will create a new agent using natural language to answer q
 
 1. Select **Open demo website**.
 
-   > [!NOTE]
-   > You may see the following message when opening the Demo website:
-   >
-   > *You may not have access to this agent due to authentication settings. Please contact the owner to use this demo.*
-   >
-   > This step is optional and is not required to complete the lab, so you can safely skip it.
-
 1. Enter the following prompt:
 
    ```prompt
