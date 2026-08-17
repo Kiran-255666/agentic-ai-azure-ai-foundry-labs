@@ -232,6 +232,8 @@ Check whether the uploaded file has completed indexing. If indexing is still in 
 
 1. Check on the **Status** of your file upload. If it is still **In progress**, refresh every few minutes until it is **Ready**.
 
+   ![Screenshot of Status.](../../media/StatusReady.png)
+
 ### Task 3.6 - Test grounding
 
 1. Select the **Test** icon in the upper-right of the page to open the testing pane.
@@ -280,7 +282,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. Note that **Orchestration** is set to **Yes - Responses will be dynamic, using available tools and knowledge as appropriate**.
 
-1. In the **Knowledge** section, set **Allow ungrounded responses** to **Off**.
+1. Scroll down, and you’ll find **Knowledge** section, set **Allow ungrounded responses** to **Off**.
 
 1. In the **Knowledge** section, set **Use information from the Web** to **Off**.
 
@@ -296,7 +298,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. Select the **Topics** tab.
 
-1. Filter by **System** topics.
+1. There you can find **Custom** and **System**. Click **System**.
 
 1. Open the **Conversational boosting** topic.
 
@@ -324,13 +326,15 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. In the **Test** pane, select the ellipses (**...**) next to the variables **{x}** icon, and toggle **Show activity map when testing** to **Off** and **Track between topics** to **On**.
 
+   ![Screenshot of Track.](../../media/Track.png)
+
 1. At the top of the **Test** pane, select the **Start new test session** icon **+**.
 
 1. Enter the following prompt:
 
    `What is the federal per diem rate?`
 
-1. The knowledge sources will not provide an answer but the agent will use generative answers to search the web to generate a response.
+1. The knowledge sources may not provide an answer, but the agent will use generative answers to search the web and generate a response. **The information may vary from person to person, so the results shown in the image below may be different for you**.
 
    ![Screenshot of the conversation in the Conversational Boosting topic.](../../media/knowledge-conversation-4.png)
 
@@ -338,7 +342,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
 1. Select the **Topics** tab.
 
-1. Filter by **System** topics.
+1. You will see **Custom** and **System**. Select **System**.
 
 1. Open the **Conversational boosting** topic.
 
@@ -362,7 +366,7 @@ In this exercise you will configure generative AI for the agent and for the gene
 
    `What is the federal per diem rate?`
 
-1. The knowledge sources and generative answers will not provide an answer. If no suitable grounded or generative response is available, the conversation may route to the Fallback topic.
+1. The knowledge sources may not provide a direct answer. In such cases, the agent may use generative answers to search the web and provide a response. If no suitable grounded or generative response is available, the conversation may route to the Fallback topic.**The information may vary from person to person, so the results shown in the image below may be different for you**.
 
    ![Screenshot of the conversation using the Fallback topic.](../../media/knowledge-conversation-5.png)
 
@@ -398,7 +402,7 @@ In this exercise, you will publish the agent to Microsoft Teams, first ensuring 
 
 1. Select the **Microsoft 365 and Microsoft Teams** tile.
 
-1. Deselect **Make agent available in Microsoft 365 Copilot**.
+1. Deselect the **Make agent available in Microsoft 365 Copilot** checkbox.
 
 1. Select **Add channel**.
 
